@@ -10,7 +10,6 @@ const PresentationVideo = () => {
                 title='Presentation video'
                 src={ videoUrl } 
                 frameBorder="0" 
-                height="auto"
                 allowFullScreen 
                 allow='autoplay'>    
             </Video>

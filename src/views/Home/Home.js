@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 
-export const Home = styled.div`
+export const Container = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
     height: 100vh;
     text-align: center;
-
-
-   
 `
 
 export const Buttons = styled.div`
@@ -23,20 +20,32 @@ export const Buttons = styled.div`
 
     div {
         margin: 1rem 1rem 1.5rem 1rem;
-    
     }
 
 `
 
 export const HomeContent = styled.div`
     animation: opening 1.8s ease-in-out;
-    padding: 3rem;
+    display: flex;
+    flex-direction: column;
 
-    
+    @media screen and (min-width: 1920px) {
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
 `
 
 export const Text = styled.h2`
     color: white;
     font-size: 2rem;
     margin: 1.5rem 0 2rem;
+
+    @media screen and (max-width: 700px) {
+        font-size: 1.4rem;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 1.3rem;
+    }
 `

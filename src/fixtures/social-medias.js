@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const socialMedias = [
     {
@@ -13,11 +13,6 @@ const socialMedias = [
     },
     {
         id: 3,
-        icon: <FaWhatsapp/>,
-        url: "https://api.whatsapp.com/send?phone=5512992452875"
-    },
-    {
-        id: 4,
         icon: <FaLinkedin/>,
         url: "https://www.linkedin.com/in/ojoaopedro/"
     },

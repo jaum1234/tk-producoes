@@ -1,51 +1,51 @@
 import { Box, CloseButton, Body, Content, Image, Text, Title, List, Link, Icon, Label  } from './styles/Modal';
 
-const Modal = (props) => {
+const Modal = ({ children, ...restProps }) => {
     return(
-        <Box>
-            { props.children } 
+        <Box { ...restProps }>
+            { children } 
         </Box>
     )
 }
 
-Modal.CloseButton = function ModalCloseButton(props) {
-    return <CloseButton onClick={ props.onClick }/>
+Modal.CloseButton = ({ onClick, ...restProps }) => {
+    return <CloseButton onClick={ onClick } { ...restProps }/>
 }
 
-Modal.Body = function ModalBody(props) {
-    return <Body>{ props.children }</Body>
+Modal.Body = ({ children, ...restProps }) => {
+    return <Body { ...restProps }>{ children }</Body>
 }
 
-Modal.Image = function ModalImage(props) {
-    return <Image src={ props.src }/>
+Modal.Image = ({ src, ...restProps }) => {
+    return <Image src={ src } { ...restProps }/>
 }
 
-Modal.Content = function ModalContent(props) {
-    return <Content>{ props.children }</Content>
+Modal.Content = ({ children, ...restProps }) => {
+    return <Content { ...restProps }>{ children }</Content>
 }
 
-Modal.Title = function ModalTitle(props) {
-    return <Title>{ props.children }</Title>
+Modal.Title = ({ children, ...restProps }) => {
+    return <Title { ...restProps }>{ children }</Title>
 }
 
-Modal.Text = function ModalText(props) {
-    return <Text>{ props.children }</Text>
+Modal.Text = ({ children, ...restProps }) => {
+    return <Text { ...restProps }>{ children }</Text>
 }
 
-Modal.List = function ModalList(props) {
-    return <List> { props.children } </List>;
+Modal.List = ({ children, ...restProps }) => {
+    return <List { ...restProps }> { children } </List>;
 }
 
-Modal.Link = function ModalLink(props) {
-    return <Link target={'_blank'} href={ props.url }> {props.children}</Link>;
+Modal.Link = ({ children, url, ...restProps }) => {
+    return <Link target={'_blank'} href={ url } { ...restProps }> {children}</Link>;
 }
 
-Modal.Icon = function ModalIcon(props) {
-    return <Icon> {props.children} </Icon>;
+Modal.Icon = ({ children, ...restProps }) => {
+    return <Icon { ...restProps }> {children} </Icon>;
 }
 
-Modal.Label = function ModalLabel(props) {
-    return <Label>{ props.children }</Label>
+Modal.Label = ({ children, ...restProps }) => {
+    return <Label { ...restProps }>{ children }</Label>
 }
 
 export default Modal;

@@ -1,7 +1,6 @@
 import Modal from "../components/Modal"
 import aboutMeLinks from "../fixtures/about-me-links";
 
-
 export const ModalContainer = (props) => {
     return(
         <Modal>

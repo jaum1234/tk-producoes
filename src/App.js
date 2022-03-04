@@ -1,14 +1,12 @@
-import Home from './views/Home/Home';
-import './App.css';
+import Home from './views/Home';
 import { GlobalStyle } from './GlobalStyles';
-import { Fragment } from 'react';
 
 const App = () => {
   return (
-    <Fragment>
+    <>
       <GlobalStyle/>
       <Home/>
-    </Fragment>
+    </>
      
   );
 }

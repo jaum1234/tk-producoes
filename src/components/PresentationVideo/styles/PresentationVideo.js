@@ -15,6 +15,7 @@ export const Video = styled.iframe`
     width: 640px;
 
     @media screen and (max-width: 700px) {
-        width: 100%;
+        height: 180px;
+        width: 320px;
     }
 `

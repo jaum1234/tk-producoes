@@ -1,8 +1,13 @@
 import { Button as StyledButton } from './styles/Button';
 
-const Button = (props) => {
+const Button = ({ children, onClick, ...restProps }) => {
     return(
-        <StyledButton {...props} onClick={ props.onClick }>{ props.children }</StyledButton>
+        <StyledButton 
+            { ...restProps } 
+            onClick={ onClick }
+        >
+            { children }
+        </StyledButton>
     )
 }
 

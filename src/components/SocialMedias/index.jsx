@@ -8,20 +8,20 @@ const SocialMedias = (props) => {
     )
 }
 
-SocialMedias.List = function SocialMediasList(props) {
-    return <List {...props}> {props.children} </List>
+SocialMedias.List = ({ children, ...restProps}) => {
+    return <List {...restProps}> { children } </List>
 }
 
-SocialMedias.Link = function SocialMediasLink(props) {
-    return <Link target={'_blank'} href={ props.url } {...props}> {props.children}</Link>;
+SocialMedias.Link = ({ children, url, ...restProps}) => {
+    return <Link target={'_blank'} href={ url } {...restProps}> { children }</Link>;
 }
 
-SocialMedias.Icon = function SocialMediasIcon(props) {
-    return <Icon {...props}> {props.children} </Icon>;
+SocialMedias.Icon = ({ children, ...restProps}) => {
+    return <Icon {...restProps}> { children } </Icon>;
 }
 
-SocialMedias.Text = function SocialMediasText(props) {
-    return <Text {...props}>{ props.children }</Text>
+SocialMedias.Text = ({ children, ...restProps}) => {
+    return <Text {...restProps}>{ children }</Text>
 }
 
 

@@ -4,7 +4,7 @@ import perfil from '../../img/perfil.jpg';
 import aboutMeTexts from '../../fixtures/about-me-texts'
 import socialMedias from '../../fixtures/social-medias';
 
-import { Buttons, Home as HomeBody, HomeContent, Text } from './Home.elements';
+import { Buttons, Container, HomeContent, Text } from './Home';
 
 import PresentationVideo from '../../components/PresentationVideo';
 import Logo from '../../components/Logo';
@@ -21,7 +21,7 @@ const Home = () => {
     const hideModal = () => setModal(false);
 
     return (
-        <HomeBody>
+        <Container>
             { modal && <OverlayEffect/> }
             { modal && 
                 <AboutMe 
@@ -31,7 +31,7 @@ const Home = () => {
             }
             <div onClick={ modal ? hideModal : null }>
                 <Logo/>
-                <HomeContent className='content'>
+                <HomeContent>
                     <Buttons>
                         <div>
                             <a href="https://www.behance.net/joopedrogalvo" target={'_blank'} rel="noreferrer">
@@ -51,8 +51,9 @@ const Home = () => {
                     <SocialMedias items={ socialMedias }/>
                 </HomeContent>
             </div>
-        </HomeBody>
+        </Container>
     )
 }
+
 
 export default Home;
