@@ -15,6 +15,7 @@ export const Box = styled.div`
 export const Buttons = styled.div`
     display: flex;
     justify-content: center;
+    margin-bottom: 100rem;
 
     @media screen and (max-width: 500px) {
         flex-direction: column;
