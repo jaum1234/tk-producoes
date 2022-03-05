@@ -35,7 +35,7 @@ const Home = () => {
                     display: "flex", 
                     flexDirection: "column", 
                     justifyContent: "center",
-                    padding: "2rem 0"
+                    padding: "5rem 0"
                     } }
                 >
                 <Logo/>
