@@ -6,6 +6,7 @@ import socialMedias from '../../fixtures/social-medias';
 
 import { Box, Buttons, Container, HomeContent, Text } from './Home';
 
+import PresentationVideo from '../../components/PresentationVideo';
 import Logo from '../../components/Logo';
 import Button from '../../components/Button';
 import OverlayEffect from '../../components/OverlayEffect';
@@ -45,6 +46,7 @@ const Home = () => {
                             </Button>
                         </div>
                     </Buttons>
+                    <PresentationVideo/>
                     <Text>Gostou do meu trabalho? <br></br> Entre em contado pelas minhas redes sociais:</Text>
                     <SocialMedias items={ socialMedias }/>
                 </HomeContent>
