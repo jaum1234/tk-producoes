@@ -29,7 +29,15 @@ const Home = () => {
                     img={ perfil } 
                     onClick={ hideModal }/>   
             }
-            <div onClick={ modal ? hideModal : null }>
+            <div 
+                onClick={ modal ? hideModal : null } 
+                style={ {
+                    display: "flex", 
+                    flexDirection: "column", 
+                    justifyContent: "center",
+                    padding: "2rem 0"
+                    } }
+                >
                 <Logo/>
                 <HomeContent>
                     <Buttons>

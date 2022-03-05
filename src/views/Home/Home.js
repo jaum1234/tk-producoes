@@ -4,9 +4,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     align-items: center;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     height: 100vh;
-    text-align: center;
 `
 
 export const Buttons = styled.div`
@@ -15,6 +14,7 @@ export const Buttons = styled.div`
 
     @media screen and (max-width: 500px) {
         flex-direction: column;
+        align-items: "center";
         margin-top: 2rem;
     }
 
@@ -28,6 +28,7 @@ export const HomeContent = styled.div`
     animation: opening 1.8s ease-in-out;
     display: flex;
     flex-direction: column;
+    align-items: "center";
 
     @media screen and (min-width: 1920px) {
         align-items: center;
@@ -39,6 +40,7 @@ export const HomeContent = styled.div`
 export const Text = styled.h2`
     color: white;
     font-size: 2rem;
+    text-align: center;
     margin: 1.5rem 0 2rem;
 
     @media screen and (max-width: 700px) {

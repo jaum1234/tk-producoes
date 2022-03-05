@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 640px;
+    display: flex;
+    justify-content: center;
+
     @media screen and (max-width: 700px) {
         width: 100%;
     }
@@ -13,7 +16,6 @@ export const Video = styled.iframe`
     animation: opening 1.8s ease-in-out;
     height: 360px;
     width: 640px;
-
     @media screen and (max-width: 700px) {
         height: 180px;
         width: 320px;

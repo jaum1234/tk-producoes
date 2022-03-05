@@ -8,10 +8,15 @@ export const Box = styled.div`
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 1.5rem;
+    box-sizing: content-box;
     position: absolute;
     width: 700px;
     top: 20%;
     animation: slideDown 0.3s ease-in-out ;
+
+    @media screen and (min-width: 800px) {
+        width: 100%;
+    }
 
 `
 
