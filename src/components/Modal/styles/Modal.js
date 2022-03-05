@@ -14,8 +14,8 @@ export const Box = styled.div`
     top: 20%;
     animation: slideDown 0.3s ease-in-out ;
 
-    @media screen and (min-width: 800px) {
-        width: 100%;
+    @media screen and (max-width: 800px) {
+        width: 80%;
     }
 
 `
@@ -29,13 +29,10 @@ export const CloseButton = styled(FaTimes)`
 
 export const Body = styled.div`
     display: flex;
-
-    > div > div > a {
+    
+    @media screen and (max-width: 730px) {
+        flex-direction: column;
         align-items: center;
-        display: flex;
-        margin-bottom: 0.5rem;
-        margin-right: 1rem;
-        text-decoration: none;
     }
 `
 
@@ -44,12 +41,19 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
+    box-sizing: content-box;
+    word-wrap: wrap;
 `
 
 export const Image = styled.img`
     border-radius: 2px;
     margin-right: 1rem;
     width: 300px;
+
+    @media screen and (max-width: 730px) {
+        width: 250px;
+        margin: 1rem 0;
+    }
 `
 
 export const Title = styled.h2`
@@ -57,8 +61,11 @@ export const Title = styled.h2`
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.8rem;
-    text-align: start;
     text-transform: uppercase;
+
+    @media screen and (max-width: 730px) {
+        align-self: center;
+    }
 `
 
 export const Text = styled.p`
@@ -67,6 +74,10 @@ export const Text = styled.p`
     margin-bottom: 0.7rem;
     text-align: start;
     word-spacing: 0.3rem;
+    
+    @media screen and (max-width: 730px) {
+        text-align: center;
+    }
 `
 
 export const List = styled.ul`

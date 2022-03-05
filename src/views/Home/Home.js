@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-    align-items: center;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -41,7 +40,7 @@ export const Text = styled.h2`
     color: white;
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem 0 2rem;
+    margin: 1.5rem 0 2rem 0;
 
     @media screen and (max-width: 700px) {
         font-size: 1.4rem;
