@@ -10,7 +10,6 @@ export const Container = styled.div`
 export const Box = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
 `
 
 export const Buttons = styled.div`
