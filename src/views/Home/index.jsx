@@ -4,7 +4,7 @@ import perfil from '../../img/perfil.jpg';
 import aboutMeTexts from '../../fixtures/about-me-texts'
 import socialMedias from '../../fixtures/social-medias';
 
-import { Buttons, Container, HomeContent, Text } from './Home';
+import { Box, Buttons, Container, HomeContent, Text } from './Home';
 
 import PresentationVideo from '../../components/PresentationVideo';
 import Logo from '../../components/Logo';
@@ -29,15 +29,7 @@ const Home = () => {
                     img={ perfil } 
                     onClick={ hideModal }/>   
             }
-            <div 
-                onClick={ modal ? hideModal : null } 
-                style={ {
-                    display: "flex", 
-                    flexDirection: "column", 
-                    justifyContent: "center",
-                    padding: "5rem 0"
-                    } }
-                >
+            <Box onClick={ modal ? hideModal : null } >
                 <Logo/>
                 <HomeContent>
                     <Buttons>
@@ -58,7 +50,7 @@ const Home = () => {
                     <Text>Gostou do meu trabalho? <br></br> Entre em contado pelas minhas redes sociais:</Text>
                     <SocialMedias items={ socialMedias }/>
                 </HomeContent>
-            </div>
+            </Box>
         </Container>
     )
 }

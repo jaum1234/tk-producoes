@@ -7,6 +7,13 @@ export const Container = styled.div`
     height: 100vh;
 `
 
+export const Box = styled.div`
+    display: "flex";
+    flex-direction: "column";
+    justify-content: "center";
+    padding: "2rem 0";
+`
+
 export const Buttons = styled.div`
     display: flex;
     justify-content: center;
