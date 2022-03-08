@@ -1,12 +1,11 @@
 import { Fade } from "react-reveal";
 import { Box, Flex } from "../../../../layout";
+import { useEffect, useState } from "react";
 import Text from '../../../../components/Text';
 import Image from "../../../../components/Image";
 import aboutMeTexts from "../../../../fixtures/about-me-texts";
-import aboutMeLinks from "../../../../fixtures/about-me-links";
 import perfil from '../../../../img/perfil.jpg';
-import { useEffect, useState } from "react";
-import { SocialMediasContainer } from '../../../../containers/SocialMedias';
+
 
 const AboutMe = () => {
 
