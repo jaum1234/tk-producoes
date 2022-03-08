@@ -1,5 +1,5 @@
 import { Box, Container } from '../../layout';
-import background from '../../img/fundo.png';
+import background from '../../assets/img/fundo.png';
 import Landing from './Sections/Landing';
 import AboutMe from './Sections/AboutMe';
 import ContactMe from './Sections/ContactMe';

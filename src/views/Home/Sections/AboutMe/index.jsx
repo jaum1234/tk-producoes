@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Text from '../../../../components/Text';
 import Image from "../../../../components/Image";
 import aboutMeTexts from "../../../../fixtures/about-me-texts";
-import perfil from '../../../../img/perfil.jpg';
+import perfil from '../../../../assets/img/perfil.jpg';
 
 
 const AboutMe = () => {

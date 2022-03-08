@@ -2,7 +2,7 @@ import { Fade, Roll } from "react-reveal";
 import Button from "../../../../components/Button";
 import PresentationVideo from "../../../../components/PresentationVideo";
 import { Box, Flex } from "../../../../layout";
-import logo from '../../../../img/asas.png';
+import logo from '../../../../assets/img/asas.png';
 import Image from "../../../../components/Image";
 import Text from '../../../../components/Text';
 
