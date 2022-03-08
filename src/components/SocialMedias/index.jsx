@@ -1,15 +1,22 @@
-import { Container, List, Icon, Link, Text } from "./styles/SocialMedias";
+import { Box, Flex } from "../../layout";
+import { List, Icon, Link } from "./styles/SocialMedias";
 
 const SocialMedias = (props) => {
     return(
-        <Container>
+        <Box mb="2rem">
             { props.children }
-        </Container>
+        </Box>
     )
 }
 
 SocialMedias.List = ({ children, ...restProps}) => {
-    return <List {...restProps}> { children } </List>
+    return(
+        <List {...restProps}>
+            <Flex { ...restProps }>
+                { children } 
+            </Flex> 
+        </List>    
+    ) 
 }
 
 SocialMedias.Link = ({ children, url, ...restProps}) => {
@@ -19,11 +26,5 @@ SocialMedias.Link = ({ children, url, ...restProps}) => {
 SocialMedias.Icon = ({ children, ...restProps}) => {
     return <Icon {...restProps}> { children } </Icon>;
 }
-
-SocialMedias.Text = ({ children, ...restProps}) => {
-    return <Text {...restProps}>{ children }</Text>
-}
-
-
 
 export default SocialMedias;

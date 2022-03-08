@@ -1,13 +1,13 @@
 import SocialMedias from "../components/SocialMedias"
 
-export const SocialMediasContainer = (props) => {
+export const SocialMediasContainer = ({ items }) => {
     return(
         <SocialMedias>
-            <SocialMedias.List>
-                { props.items.map(item => (
-                    <SocialMedias.Link url={ item.url } key={ item.id }>
+            <SocialMedias.List justifyContent="center" alignItems="center">
+                { items.map(({ url, id, icon }) => (
+                    <SocialMedias.Link url={ url } key={ id }>
                         <SocialMedias.Icon>
-                            { item.icon }
+                            { icon }
                         </SocialMedias.Icon>
                     </SocialMedias.Link>
                 )) }

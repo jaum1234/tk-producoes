@@ -3,13 +3,29 @@ import background from './img/fundo.png';
 const { createGlobalStyle } = require("styled-components");
 
 export const GlobalStyle = createGlobalStyle`
+
     * {
-        font-family: monospace;
+        font-family: 'Quicksand', sans-serif;
     }
 
     body {
-        background: url(${background}) ;
         line-height: 1;
+    }
+
+    h1, h2, h3 {
+        font-size: 54px !important;
+        
+        @media screen and (max-width: 575px) {
+            font-size: 28px !important;
+        }
+    }
+
+    p {
+        font-size: 18px !important;
+
+        @media screen and (max-width: 575px) {
+            font-size: 16px !important;
+        }
     }
 
     html, body, div, span, applet, object, iframe,
