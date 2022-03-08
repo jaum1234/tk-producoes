@@ -1,5 +1,3 @@
-import background from './img/fundo.png';
-
 const { createGlobalStyle } = require("styled-components");
 
 export const GlobalStyle = createGlobalStyle`
