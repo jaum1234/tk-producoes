@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Text = styled.p`
     color: ${props => props.color || "#fff"};
 
-    font-family: ${props => props.ff || "Quicksand, sans-serif"/*"Space Grotesk, sans-serif"*//*"Poppins, sans-serif"*/};
+    font-family: ${props => props.ff || "Poppins, sans-serif"};
     font-size: ${props => props.fs || "16px"};
     font-weight: ${props => props.fw || "normal"};
 

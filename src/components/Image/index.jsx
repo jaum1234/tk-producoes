@@ -1,8 +1,17 @@
-import { StyledImage } from './styles/Image';
+import { Box } from './styles/Image';
+import NextImage from 'next/image';
 
-const Image = ({ src, ...restProps }) => {
+const Image = ({ src, alt, width, height, objectFit, ...restProps }) => {
     return(
-        <StyledImage src={ src } { ...restProps }/>
+        <Box { ...restProps }>
+            <NextImage 
+                src={ src } 
+                alt={ alt } 
+                width={ width }
+                height={ height }
+                objectFit={ objectFit }
+            />
+        </Box>
     )
 }
 

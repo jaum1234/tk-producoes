@@ -1,14 +1,12 @@
 
 import { Container, Video } from './styles/PresentationVideo';
 
-const PresentationVideo = () => {
-    const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay=1&muted=1&loop=1';
-
+const PresentationVideo = ({ src }) => {
     return (
         <Container>
             <Video 
                 title='Presentation video'
-                src={ videoUrl } 
+                src={ src } 
                 frameBorder="0" 
                 allowFullScreen 
                 allow='autoplay'>    

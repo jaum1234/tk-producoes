@@ -12,9 +12,7 @@ const SocialMedias = (props) => {
 SocialMedias.List = ({ children, ...restProps}) => {
     return(
         <List {...restProps}>
-            <Flex { ...restProps }>
-                { children } 
-            </Flex> 
+            { children }
         </List>    
     ) 
 }

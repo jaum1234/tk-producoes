@@ -1,18 +1,20 @@
-const { createGlobalStyle } = require("styled-components");
+import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 
-    * {
-        font-family: 'Quicksand', sans-serif;
+    *, html {
+        font-family: 'Poppins', sans-serif;
     }
 
     body {
         line-height: 1;
+        background: url('/assets/img/fundo.png');
     }
+
 
     h1, h2, h3 {
         font-size: 54px !important;
-        
+                
         @media screen and (max-width: 575px) {
             font-size: 28px !important;
         }

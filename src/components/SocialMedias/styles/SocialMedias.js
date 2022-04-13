@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const List = styled.ul`
+    display: flex;
     list-style: none;
 `
 
@@ -8,11 +9,10 @@ export const Link = styled.a`
     color: white;
     cursor: pointer;
     margin: 0 0.8rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
 
     &:hover {
-        color: rgb(216, 216, 216);
-        transform: scale(1.2);
+        color: #7E328B;
     }
 `
 
