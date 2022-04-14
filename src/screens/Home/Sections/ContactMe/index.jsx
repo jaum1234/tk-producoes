@@ -1,4 +1,3 @@
-import { Fade } from "react-reveal";
 import { Box, Flex } from "../../../../layout";
 import { SocialMediasContainer } from "../../../../containers/SocialMedias";
 import socialMedias from "../../../../fixtures/social-medias";

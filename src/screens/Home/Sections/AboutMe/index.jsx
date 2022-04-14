@@ -1,4 +1,3 @@
-import { Fade } from "react-reveal";
 import { Box, Flex } from "../../../../layout";
 import { useEffect, useState } from "react";
 import Text from '../../../../components/Text';

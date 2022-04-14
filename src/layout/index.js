@@ -73,3 +73,10 @@ export const Flex = styled.div`
         flex-direction: column !important;
     }
 `
+
+export const Grid = styled.div`
+    display: grid;
+    align-items: ${props => props.alignItems};
+    gap: ${props => props.gap};
+    grid-template-columns: ${props => props.templateColumns};
+`

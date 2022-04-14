@@ -4,17 +4,17 @@ const socialMedias = [
     {
         id: 1,
         icon: <FaTwitter/>,
-        url:  "https://twitter.com/ojaaaopedro/",
+        href:  "https://twitter.com/ojaaaopedro/",
     },
     {
         id: 2,
         icon: <FaInstagram/>,
-        url: "https://www.instagram.com/ojaaopedro/"
+        href: "https://www.instagram.com/ojaaopedro/"
     },
     {
         id: 3,
         icon: <FaLinkedin/>,
-        url: "https://www.linkedin.com/in/ojoaopedro/"
+        href: "https://www.linkedin.com/in/ojoaopedro/"
     },
 ]
 

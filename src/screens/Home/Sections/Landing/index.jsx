@@ -1,4 +1,3 @@
-import { Fade, Roll } from "react-reveal";
 import Button from "../../../../components/Button";
 import PresentationVideo from "../../../../components/PresentationVideo";
 import { Box, Flex } from "../../../../layout";
@@ -56,7 +55,7 @@ const Landing = ({ videoUrl, primaryTitle, secundaryTitle }) => {
                         mb="0.8rem" 
                         as="h1"
                         fw="bold" 
-                        color='#7E328B'
+                        color='#840032'
                         textAlign="center"
                     >
                         
@@ -67,6 +66,7 @@ const Landing = ({ videoUrl, primaryTitle, secundaryTitle }) => {
                         fw='bold'
                         fs='8px'
                         textAlign='center'
+                        color='#e5dada'
                     >
                         { secundaryTitle }
                     </Text>

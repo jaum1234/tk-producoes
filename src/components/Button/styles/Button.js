@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import themes from "../../../styles/themes";
 
-export const Button = styled.button`    
-    background: #7E328B;
+export const StyledButton = styled.button`    
+    background: ${themes.theme_1.colors.red};
     background-size: 200% auto;
     border: none;
     border-radius: 5px;
@@ -12,10 +13,10 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     margin: 10px;
-    height: 60px;
+    height: 45px;
     width: ${props => props.width};
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     transition: 0.5s;
     font-size: 18px;
 
