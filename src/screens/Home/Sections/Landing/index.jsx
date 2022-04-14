@@ -42,14 +42,16 @@ const Landing = ({ videoUrl, primaryTitle, secundaryTitle }) => {
                 flexDir="column"
                 alignItems="center"
             >
+                <Fade left>
                     <Image 
                         src={ logo }
                         mb="1.5rem"
                         mt="3rem"
-                        width={90}
-                        height={90}
-                    />
+                        width={70}
+                        height={70}
+                        />
 
+                </Fade>
                     <Text 
                         mb="0.8rem" 
                         as="h1"
@@ -61,7 +63,9 @@ const Landing = ({ videoUrl, primaryTitle, secundaryTitle }) => {
                         { primaryTitle }
                     </Text>
                     <Text 
-                        as="p" 
+                        textTransform='uppercase'
+                        fw='bold'
+                        fs='8px'
                         textAlign='center'
                     >
                         { secundaryTitle }
