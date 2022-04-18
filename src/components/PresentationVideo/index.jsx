@@ -1,10 +1,11 @@
 
 import { Container, Video } from './styles/PresentationVideo';
 
-const PresentationVideo = ({ src }) => {
+const PresentationVideo = ({ src, id }) => {
     return (
-        <Container>
+        <Container >
             <Video 
+                id={ id }
                 title='Presentation video'
                 src={ src } 
                 frameBorder="0" 

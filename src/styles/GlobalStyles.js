@@ -6,11 +6,13 @@ export const GlobalStyles = createGlobalStyle`
     *, html {
         color: ${themes.theme_1.colors.light};
         font-family: ${themes.fonts.poppins};
+        scroll-behavior: smooth;
     }
 
     body {
         line-height: 1;
         background: ${themes.theme_1.colors.dark};
+        
     }
 
     p {

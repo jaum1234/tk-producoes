@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import { keyframes } from 'styled-components';
+
 
 
 export const Box = styled.div`
+
     box-shadow: ${props => props.boxShadow || "none"};
 
     margin: ${props => props.m};
@@ -11,4 +14,6 @@ export const Box = styled.div`
     margin-right: ${props => props.mr};
 
     opacity: ${props => props.opacity};
+
+    
 `

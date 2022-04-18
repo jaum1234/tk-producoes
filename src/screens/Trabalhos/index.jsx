@@ -23,6 +23,7 @@ const Trabalhos = () => {
                         <Navbar.Brand src={ logo } />
                         <Navbar.Nav>
                             <Navbar.Item href='#sobre-mim'>Sobre mim</Navbar.Item>
+                            <Navbar.Item href='#contato'>Contato</Navbar.Item>
                         </Navbar.Nav>
                     </div>
                     <SocialMedias>
@@ -50,34 +51,13 @@ const Trabalhos = () => {
                                     src={ videoUrl }
                                 />
                                 <div>
-                                    <TrabalhosSubTitle>Softwares que utilizo: </TrabalhosSubTitle>
-                                    <TrabalhosList>
-                                        <TrabalhosItem>
-                                            <TrabalhosIcon>
-                                                <SiAdobephotoshop/>
-                                            </TrabalhosIcon>
-                                            <TrabalhosLabel>Adobe Photoshop</TrabalhosLabel>
-                                        </TrabalhosItem>
-                                        <TrabalhosItem>
-                                            <TrabalhosIcon>
-                                                <SiAdobepremierepro/>
-                                            </TrabalhosIcon>
-                                            <TrabalhosLabel>Adobe Premiere</TrabalhosLabel>
-                                        </TrabalhosItem>
-                                        <TrabalhosItem>
-                                            <TrabalhosIcon>
-                                                <SiAdobeaftereffects/>
-                                            </TrabalhosIcon>
-                                            <TrabalhosLabel>Adobe After Effects</TrabalhosLabel>
-                                        </TrabalhosItem>
-                                    </TrabalhosList>
+                                    <h3>Gostou do meu trabalho?</h3>
                                 </div>
                             </Grid>
-                            <Button>Veja mais dos meus trabalhos</Button>
                         </Fade>
                     </section>
                     <section>
-                        <h2></h2>
+                        <h2>Saiba um pouco sobre mim</h2>
                     </section>
                 </Grid>
             </main>

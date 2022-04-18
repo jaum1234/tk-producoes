@@ -27,6 +27,7 @@ const Nav = styled.nav`
 const Item = styled(Link)`
 
     transition: 0.2s ease-in-out all;
+    margin-right: 1rem;
 
     &:hover {
         color: ${themes.theme_1.colors.red};
