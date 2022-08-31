@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         color: ${themes.theme_1.colors.light};
         font-family: ${themes.fonts.poppins};
         scroll-behavior: smooth;
+        box-sizing: border-box;
     }
 
     body {
@@ -15,13 +16,7 @@ export const GlobalStyles = createGlobalStyle`
         
     }
 
-    p {
-        font-size: 18px !important;
-
-        @media screen and (max-width: 575px) {
-            font-size: 16px !important;
-        }
-    }
+ 
 
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,

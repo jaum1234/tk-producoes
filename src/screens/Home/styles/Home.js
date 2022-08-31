@@ -22,8 +22,7 @@ const shine = keyframes`
 
 const HomeScreen = styled.div`
     display: grid;
-    grid-auto-rows: 500px;
-    align-items: center;
+    grid-auto-rows: 100vh 500px 300px;
 `
 
 const HomeLogo = styled(Image)`
@@ -38,7 +37,7 @@ const HomeTitle = styled.h1`
     line-height: 50px;
     font-weight: 400;
     font-family: ${themes.fonts.inter};
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
 
     span {
@@ -70,11 +69,36 @@ const HomeSection = styled.section`
     width: 100%;
     height: ${props => props.height};
     justify-content: ${props => props.justifyContent || 'center'};
+    
 `
 
 const HomeText = styled.p`
-    margin: 1rem 0;
+    margin: ${props => props.margin};
+    max-width: 500px;
+    text-transform: ${props => props.textTransform};
+    color: ${props => props.color};
+    font-size: ${props => props.fontSize};
+    font-weight: ${props => props.fontWeight};
+    line-height: 20px;
 `
 
+const HomeSubtitle = styled.h2`
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+`
 
-export { HomeScreen, HomeLogo, HomeTitle, HomeButton, HomeSection, HomeText };
+export const HomeContentBox = styled.div`
+    display: flex;
+`
+
+export { 
+    HomeScreen, 
+    HomeLogo, 
+    HomeTitle, 
+    HomeButton, 
+    HomeSection, 
+    HomeText,
+    HomeSubtitle 
+};

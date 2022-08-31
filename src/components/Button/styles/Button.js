@@ -5,7 +5,6 @@ export const StyledButton = styled.button`
     background: ${themes.theme_1.colors.red};
     background-size: 200% auto;
     border: none;
-    border-radius: 5px;
     box-shadow: 0px 13px 24px -7px rgba(0,0,0,0.1);
     cursor: pointer;
     color: white;            
@@ -19,6 +18,7 @@ export const StyledButton = styled.button`
     font-weight: 400;
     transition: 0.5s;
     font-size: 18px;
+    font-weight: bold;
 
     &:hover {
         color: #fff;
