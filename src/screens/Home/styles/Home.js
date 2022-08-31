@@ -31,7 +31,7 @@ const HomeLogo = styled(Image)`
 `
 
 const HomeTitle = styled.h1`
-    color: ${themes.theme_1.colors.light};
+    color: ${themes.colors.light};
     font-size: 20px;
     text-align: center;
     line-height: 50px;
@@ -41,7 +41,7 @@ const HomeTitle = styled.h1`
 
 
     span {
-        color: ${themes.theme_1.colors.red};
+        color: ${themes.colors.red};
         font-size: 60px;
         font-weight: bold;
         text-transform: uppercase;
@@ -57,7 +57,7 @@ const HomeTitle = styled.h1`
 `
 
 const HomeButton = styled(Button)`
-    background-color: ${themes.theme_1.colors.red};
+    background-color: ${themes.colors.red};
     width: 150px;
     height: 45px;
 `

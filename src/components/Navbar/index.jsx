@@ -1,10 +1,15 @@
+import { Container, Flex } from "../../layout";
 import Link from "../Link";
-import { Brand, Item, Nav, StyledNavbar } from "./styles/Navbar";
+import { Brand, Item, Nav, StyledNavbar, Divider, Language } from "./styles/Navbar";
 
 const Navbar = ({ children, ...restProps }) => {
     return (
         <StyledNavbar { ...restProps }>
-            { children }
+            <Container>
+                <Flex justifyContent='space-between' alignItems='center'>
+                    { children }
+                </Flex>
+            </Container>
         </StyledNavbar>
     )
 }
@@ -30,6 +35,18 @@ Navbar.Item = function NavbarItem({ children, href, ...restProps }) {
         <Item href={ href } { ...restProps }>
             { children }
         </Item>
+    )
+}
+
+Navbar.Divider = function NavbarDivider({ ...restProps }) {
+    return(
+        <Divider { ...restProps }/>
+    )
+}
+
+Navbar.Language = function NavbarLanguage({ src, ...restProps }) {
+    return(
+        <Language src={ src } { ...restProps }/>
     )
 }
 

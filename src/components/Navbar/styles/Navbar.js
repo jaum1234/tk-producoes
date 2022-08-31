@@ -4,15 +4,7 @@ import Link from "../../Link";
 import themes from "../../../styles/themes";
 
 const StyledNavbar = styled.header`
-    display: flex;
-    align-items: center;
     padding: 1.5rem 0;
-    justify-content: space-between;
-
-    div {
-        display: flex;
-        align-items: center;
-    }
 `
 
 const Brand = styled(Image)`
@@ -25,13 +17,17 @@ const Nav = styled.nav`
 `
 
 const Item = styled(Link)`
-
-    transition: 0.2s ease-in-out all;
-    margin-right: 1rem;
-
-    &:hover {
-        color: ${themes.theme_1.colors.red};
-    }
+    font-size: 16px;
+    margin-right: 24px;
 `
 
-export { StyledNavbar, Brand, Nav, Item };
+const Divider = styled.div`
+    border-left: 1px solid ${themes.colors.light};
+    height: 33px;
+`
+
+const Language = styled(Image)`
+    margin-left: 24px;
+`
+
+export { StyledNavbar, Brand, Nav, Item, Divider, Language };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import themes from "../../../styles/themes";
 
 export const StyledButton = styled.button`    
-    background: ${themes.theme_1.colors.red};
+    background: ${themes.colors.red};
     background-size: 200% auto;
     border: none;
     box-shadow: 0px 13px 24px -7px rgba(0,0,0,0.1);

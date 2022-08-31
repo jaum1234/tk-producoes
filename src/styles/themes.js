@@ -1,17 +1,13 @@
 const themes = {
     fonts: {
         inter: `"Inter", sans-serif`,
-        poppins: `"Poppins", sans-serif`
     },
-    theme_1: {
-        colors: {
-            dark: '#02040f',
-            light: '#e5dada',
-            red: '#840032',
-            secundary_dark: '#002642',
-            orange: '#e59500'
-        }
-    }
+    colors: {
+        dark_purple: '#1C1424',
+        light: '#E0E0E0',
+        light_purple: '#28143C',
+        call_to_action: '#821CE9',
+    }  
 }
 
 export default themes;

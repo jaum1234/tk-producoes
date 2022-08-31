@@ -4,20 +4,18 @@ import themes from "./themes";
 export const GlobalStyles = createGlobalStyle`
 
     *, html {
-        color: ${themes.theme_1.colors.light};
-        font-family: ${themes.fonts.poppins};
+        color: ${themes.colors.light};
+        font-family: ${themes.fonts.inter};
         scroll-behavior: smooth;
         box-sizing: border-box;
     }
 
     body {
         line-height: 1;
-        background: ${themes.theme_1.colors.dark};
-        
+        background: ${themes.colors.dark_purple};
     }
 
  
-
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,

@@ -14,7 +14,7 @@ const Link = styled(MyLink)`
     font-size: 25px;
 
     &:hover {
-        color: ${themes.theme_1.colors.red} !important;
+        color: ${themes.colors.red} !important;
     }
 `
 
