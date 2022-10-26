@@ -25,26 +25,17 @@ const HomeScreen = styled.div`
     grid-auto-rows: 100vh 500px 300px;
 `
 
-const HomeLogo = styled(Image)`
-    animation: ${rotate} 5s linear infinite;
-    margin-bottom: 2rem;
-`
-
 const HomeTitle = styled.h1`
     color: ${themes.colors.light};
-    font-size: 20px;
+    font-size: 32px;
     text-align: center;
-    line-height: 50px;
-    font-weight: 400;
-    font-family: ${themes.fonts.inter};
-    margin-bottom: 1rem;
-
+    font-weight: bold;
+    margin-top: 55px;
 
     span {
         color: ${themes.colors.red};
-        font-size: 60px;
-        font-weight: bold;
-        text-transform: uppercase;
+        font-size: 25.58px;
+        font-weight: normal;
 
         background: linear-gradient(to right, #840032 20%, #A70040 40%, #EC005A 60%, #840032 80%);
         background-size: 200% auto;
@@ -82,11 +73,19 @@ const HomeText = styled.p`
     line-height: 20px;
 `
 
-const HomeSubtitle = styled.h2`
-    font-size: 2rem;
-    text-transform: uppercase;
+const HomeDescription = styled.h2`
+    font-size: 14px;
     text-align: center;
-    margin-bottom: 3rem;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 20px;
+`
+
+const HomeSubtitle = styled.h2`
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    text-align: center;
 `
 
 export const HomeContentBox = styled.div`
@@ -95,10 +94,10 @@ export const HomeContentBox = styled.div`
 
 export { 
     HomeScreen, 
-    HomeLogo, 
     HomeTitle, 
     HomeButton, 
     HomeSection, 
     HomeText,
-    HomeSubtitle 
+    HomeSubtitle ,
+    HomeDescription
 };

@@ -5,6 +5,10 @@ import { keyframes } from 'styled-components';
 
 export const Box = styled.div`
 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     box-shadow: ${props => props.boxShadow || "none"};
 
     margin: ${props => props.m};

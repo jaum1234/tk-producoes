@@ -1,16 +1,15 @@
-import { Container, Flex } from "../../layout";
+import { useEffect, useState } from "react";
+import React from "react";
 import Link from "../Link";
-import { Brand, Item, Nav, StyledNavbar, Divider, Language } from "./styles/Navbar";
+import ReactDOM from "react-dom";
+import { Brand, Item, Nav, Header, Divider, Languages, Language, Collapse, Ham, Box } from "./styles/Navbar";
+import { useRef } from "react";
 
 const Navbar = ({ children, ...restProps }) => {
     return (
-        <StyledNavbar { ...restProps }>
-            <Container>
-                <Flex justifyContent='space-between' alignItems='center'>
-                    { children }
-                </Flex>
-            </Container>
-        </StyledNavbar>
+        <Header { ...restProps } id="header">   
+            { children }
+        </Header>
     )
 }
 
@@ -20,6 +19,24 @@ Navbar.Brand = function NavbarBrand({ src, ...restProps }) {
             <Brand src={ src } { ...restProps } />
         </Link>
     )
+}
+
+Navbar.Box = function NavbarBox({ children, ...restProps }) {
+    return(
+        <Box { ...restProps } id="nav-box">
+            { children }
+        </Box>
+    )
+}
+
+Navbar.Collapse = function NavbarBox({ collapse, children, ...restProps }) {
+    
+    return ( 
+        <Collapse { ...restProps } style={ collapse ? {top: "55px"} : {top: "-200px"} }>
+            { children }
+        </Collapse>   
+    )
+    
 }
 
 Navbar.Nav = function NavbarNav({ children, ...restProps }) {
@@ -44,10 +61,25 @@ Navbar.Divider = function NavbarDivider({ ...restProps }) {
     )
 }
 
-Navbar.Language = function NavbarLanguage({ src, ...restProps }) {
+Navbar.Languages = function NavbarLanguages({ children, ...restProps }) {
     return(
-        <Language src={ src } { ...restProps }/>
+        <Languages { ...restProps }>
+            { children }
+        </Languages>
     )
 }
+
+Navbar.Language = function NavbarLanguage({ src, ...restProps }) {
+    return(
+            <Language src={ src } { ...restProps }/>
+    )
+}
+
+Navbar.Ham = function NavbarHam({ onOpen, ...restProps }) {
+    return(
+        <Ham { ...restProps } onClick={ onOpen }/>
+    )
+}
+
 
 export default Navbar;
