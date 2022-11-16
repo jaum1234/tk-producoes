@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import themes from "../../../styles/themes";
-import MyLink from "../../Link";
+import { Image as MyImage, Link as MyLink } from "../..";
 
-const StyledSocialMedias = styled.div`
+const List = styled.div`
     display: flex;
+    justify-content: center;
     list-style: none;
 `
 
@@ -11,12 +11,16 @@ const Link = styled(MyLink)`
     cursor: pointer;
     margin: 0 0.8rem;
     transition: 0.2s ease-in-out;
-    font-size: 25px;
+    font-size: 25px;  
 
     &:hover {
-        color: ${themes.colors.red} !important;
+        filter: brightness(110%);
     }
 `
 
+const Image = styled(MyImage)`
+    height: 41.48px;
+    width: 41.48px;
+`
 
-export { StyledSocialMedias, Link };
+export { List, Link, Image };

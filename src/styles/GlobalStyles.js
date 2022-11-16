@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         line-height: 1;
-        background: ${themes.colors.dark_purple};
+        height: 100vh;
     }
 
  

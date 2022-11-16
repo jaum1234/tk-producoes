@@ -1,32 +1,42 @@
 import Head from 'next/head';
-import { Container, Flex } from '../src/layout';
-import { GlobalStyles } from '../src/styles/GlobalStyles';
-
 import styled from 'styled-components';
 import themes from '../src/styles/themes';
-import { NavbarContainer } from '../src/containers/navbar';
+import { Navbar } from '../src/containers';
+import { Container } from '../src/layout';
+import { GlobalStyles } from '../src/styles/GlobalStyles';
 
-const BackgroundOverlay = styled.div`
-    background-color: ${themes.colors.light_purple};
-    height: 200px;
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+const MainBackground = styled.div`
+    background-color: ${themes.colors.dark_purple};
+    z-index: -2;
     position: absolute;
-    top: 20%;
+    width: 100%;
+    height: 100%;
+`
+
+const SecundaryBackground = styled.div`
+    background-color: ${themes.colors.light_purple};
+    width: 100%;
+    height: 140vh;
+    position: absolute;
+    top: 62%;
+    z-index: -1;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 `
 
 function MyApp({ Component, pageProps }) {
     return (
-        <div>
+        <>
+            <SecundaryBackground/>
+            <MainBackground/>
             <Head>
-                <title>Edição de vídeos e imagens - TK Produções</title>
+                <title>Home - Edição de vídeos e imagens - TK Produções</title>
             </Head>
             <GlobalStyles/>
-            <NavbarContainer/>
+            <Navbar/>
             <Container>
                 <Component {...pageProps} />
             </Container>
-            <BackgroundOverlay/>
-        </div>
+        </>
     )
 }
    

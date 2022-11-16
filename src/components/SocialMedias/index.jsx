@@ -1,16 +1,25 @@
-import { Box, Flex } from "../../layout";
-import { Link, StyledSocialMedias } from "./styles/SocialMedias";
+import { List, Link, Image } from "./styles/SocialMedias";
 
-const SocialMedias = (props) => {
+const SocialMedias = ({ children }) => {
     return(
-        <StyledSocialMedias mb="2rem">
-            { props.children }
-        </StyledSocialMedias>
+        <List>
+            { children }
+        </List>
     )
 }
 
 SocialMedias.Link = ({ children, href, ...restProps}) => {
-    return <Link target={'_blank'} href={ href } {...restProps}> { children }</Link>;
+    return(
+        <Link target={'_blank'} href={ href } {...restProps}> 
+            { children }
+        </Link>
+    )
+}
+
+SocialMedias.Image = ({ src, ...restProps }) => {
+    return(
+        <Image src={ src } { ...restProps }/>
+    )
 }
 
 

@@ -1,9 +1,9 @@
 import NextLink from 'next/link';
 
-const Link = ({ children, href, ...restProps }) => {
+const Link = ({ children, href, target, ...restProps }) => {
     return (
         <NextLink href={ href }>
-            <a { ...restProps }>
+            <a { ...restProps } target={ target }>
                 { children }
             </a>
         </NextLink>

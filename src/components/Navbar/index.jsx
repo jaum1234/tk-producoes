@@ -1,9 +1,20 @@
-import { useEffect, useState } from "react";
 import React from "react";
 import Link from "../Link";
-import ReactDOM from "react-dom";
-import { Brand, Item, Nav, Header, Divider, Languages, Language, Collapse, Ham, Box } from "./styles/Navbar";
-import { useRef } from "react";
+import { 
+    Brand, 
+    Item, 
+    Nav, 
+    Header, 
+    Divider, 
+    Languages, 
+    Language, 
+    Collapse, 
+    Ham, 
+    Box,
+    Overlay
+} from "./styles/Navbar";
+
+
 
 const Navbar = ({ children, ...restProps }) => {
     return (
@@ -71,13 +82,24 @@ Navbar.Languages = function NavbarLanguages({ children, ...restProps }) {
 
 Navbar.Language = function NavbarLanguage({ src, ...restProps }) {
     return(
-            <Language src={ src } { ...restProps }/>
+        <Language src={ src } { ...restProps }/>
     )
 }
 
 Navbar.Ham = function NavbarHam({ onOpen, ...restProps }) {
     return(
         <Ham { ...restProps } onClick={ onOpen }/>
+    )
+}
+
+Navbar.Overlay = function NavbarOverlay({ collapse, ...restProps }) {
+    return(
+        <Overlay 
+            style={ 
+                collapse ? { filter: "opacity(72%)" } : { filter: "opacity(0)" }
+            } 
+            { ...restProps }
+        />
     )
 }
 

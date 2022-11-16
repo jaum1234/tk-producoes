@@ -1,0 +1,1 @@
+export { default as socialMedias} from "./social_medias";

@@ -7,7 +7,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 const Header = styled.header`
     position: sticky;
     top: 0%;
-    z-index: 1;
+    z-index: 3;
 `
 
 const Brand = styled(Image)`
@@ -120,8 +120,13 @@ const Ham = styled(AiOutlineMenu)`
     }
 `
 
+const Overlay = styled.div`
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+`
 
-
-
-
-export { Header , Brand, Box, Nav, Item, Divider, Languages, Language, Collapse, Ham };
+export { Header , Brand, Box, Nav, Item, Divider, Languages, Language, Collapse, Ham, Overlay };

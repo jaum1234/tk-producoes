@@ -20,6 +20,7 @@ export const StyledButton = styled.button`
     font-weight: bold;
     border-radius: 32px;
     margin: 0 auto;
+    padding: 5px 0;
 
     &:hover {
         color: #fff;

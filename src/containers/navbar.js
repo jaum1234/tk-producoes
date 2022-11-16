@@ -5,7 +5,7 @@ import usa_flag from '../../public/assets/img/united-states-of-america.png'
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-export const NavbarContainer = () => {
+const NavbarContainer = () => {
 
     const [ collapse, setCollapse ] = useState(false);
 
@@ -32,7 +32,10 @@ export const NavbarContainer = () => {
                     </Navbar.Collapse>
                 </Navbar.Box>
             </Navbar>
+            <Navbar.Overlay collapse={ collapse }/>
         </>
     )
 }
+
+export default NavbarContainer;
 

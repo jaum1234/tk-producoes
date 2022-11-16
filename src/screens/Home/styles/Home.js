@@ -4,16 +4,6 @@ import Button from '../../../components/Button';
 import Image from '../../../components/Image';
 import themes from '../../../styles/themes';
 
-const rotate = keyframes`
-    from {
-    transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-`
-
 const shine = keyframes`
     to {
         background-position: 200% center;
@@ -22,7 +12,8 @@ const shine = keyframes`
 
 const HomeScreen = styled.div`
     display: grid;
-    grid-auto-rows: 100vh 500px 300px;
+    grid-template-columns: 1fr;
+    row-gap: 100px;
 `
 
 const HomeTitle = styled.h1`
@@ -53,16 +44,8 @@ const HomeButton = styled(Button)`
     height: 45px;
 `
 
-const HomeSection = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: ${props => props.height};
-    justify-content: ${props => props.justifyContent || 'center'};
-    
+const HomeSection = styled.section`   
 `
-
 const HomeText = styled.p`
     margin: ${props => props.margin};
     max-width: 500px;
@@ -86,6 +69,7 @@ const HomeSubtitle = styled.h2`
     font-size: 20px;
     line-height: 24.2px;
     text-align: center;
+    margin-bottom: 20px;
 `
 
 export const HomeContentBox = styled.div`

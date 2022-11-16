@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Video = styled.iframe`
     box-shadow: 0px 13px 24px -7px rgba(0,0,0,0.1);
-    width: 950px;
+    width: 90%;
     height: 547px;
     margin-bottom: 27.7px;
 
