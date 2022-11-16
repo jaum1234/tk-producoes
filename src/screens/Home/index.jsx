@@ -5,12 +5,11 @@ import {
     HomeSubtitle, 
     HomeDescription 
 } from './styles/Home';
-import { 
-    Link, 
-    PresentationVideo,
-    Button, 
-} from '../../components';
-import { ClientCards, SocialMedias } from '../../containers';
+import Link from "../../components/Link";
+import PresentationVideo from "../../components/PresentationVideo";
+import Button from "../../components/Button";
+import ClientCards  from "../../containers/client_cards";
+import SocialMedias from "../../containers/social_medias";
 
 const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay=1&muted=1&loop=1'
 
