@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Image, Link as MyLink } from "../..";
+import Image from "../../Image";
+import MyLink from "../../Link";
 
 const List = styled.div`
     display: flex;

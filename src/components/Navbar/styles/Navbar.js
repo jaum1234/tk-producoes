@@ -1,6 +1,6 @@
 import Image from "../../Image";
 import styled from 'styled-components';
-import { Link } from "../..";
+import Link  from "../../Link";
 import themes from "../../../styles/themes";
 import { AiOutlineMenu } from 'react-icons/ai';
 

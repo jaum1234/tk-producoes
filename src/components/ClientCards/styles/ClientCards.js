@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import themes from "../../../styles/themes";
-import { Image as MyImage } from '../..';
+import Image from '../../Image';
 
 const List = styled.div`
     display: Grid;
@@ -23,7 +23,7 @@ const Box = styled.div`
     margin: 0 auto;
 `
 
-const Banner = styled(MyImage)`
+const Banner = styled(Image)`
     height: 156.57px;
     width: 234.86px;
     object-fit: cover;
