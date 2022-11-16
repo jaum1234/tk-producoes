@@ -10,7 +10,7 @@ const SocialMediasContainer = () => {
                         key={ id } 
                         href={ href }
                     >
-                        <SocialMedias.Image 
+                        <SocialMedias.Icon 
                             src={ icon }
                         />
                     </SocialMedias.Link>

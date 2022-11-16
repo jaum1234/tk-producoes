@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Image as MyImage, Link as MyLink } from "../..";
+import { Image, Link as MyLink } from "../..";
 
 const List = styled.div`
     display: flex;
@@ -18,9 +18,9 @@ const Link = styled(MyLink)`
     }
 `
 
-const Image = styled(MyImage)`
+const Icon = styled(Image)`
     height: 41.48px;
     width: 41.48px;
 `
 
-export { List, Link, Image };
+export { List, Link, Icon };

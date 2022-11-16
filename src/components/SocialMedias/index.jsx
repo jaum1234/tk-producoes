@@ -1,4 +1,4 @@
-import { List, Link, Image } from "./styles/SocialMedias";
+import { List, Link, Icon } from "./styles/SocialMedias";
 
 const SocialMedias = ({ children }) => {
     return(
@@ -16,9 +16,9 @@ SocialMedias.Link = ({ children, href, ...restProps}) => {
     )
 }
 
-SocialMedias.Image = ({ src, ...restProps }) => {
+SocialMedias.Icon = ({ src, ...restProps }) => {
     return(
-        <Image src={ src } { ...restProps }/>
+        <Icon src={ src } { ...restProps }/>
     )
 }
 
