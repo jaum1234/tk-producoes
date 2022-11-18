@@ -35,8 +35,8 @@ const ClientCardsContainer = () => {
                     <ClientCards.Card key={ client.id }>
                         <ClientCards.Banner 
                             src={ client.snippet.thumbnails.high.url } 
-                            width={ 234.86 }
-                            height={ 156.57 }
+                            width={ 411 }
+                            height={ 274 }
                             objectFit="cover"
                         />
                         <ClientCards.Infos>

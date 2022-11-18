@@ -15,21 +15,30 @@ const List = styled.div`
 ` 
 
 const Card = styled.div`
-    width: 234.86px;
-    height: 156.57px;
+   
+    width: 411px;
+    height: 274px;
     position: relative;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+
+    @media screen and (max-width: 480px) {
+        width: 234.86px;
+        height: 156.57px;
+    }
 `
 
 const Banner = styled(Image)`
+
     box-shadow: 0px 2.28571px 2.28571px rgba(0, 0, 0, 0.25);
 `
 
 const Infos = styled.div`
-    width: 121.71px;
-    height: 45.14px;
+   
+    width: 213px;
+    height: 79px;
+
     border-radius: 2.86px;
     background: linear-gradient(180deg, #BA78FC 0%, #821CE9 100%);
     
@@ -42,6 +51,11 @@ const Infos = styled.div`
     position: absolute;
     top: 90%;
 
+    @media screen and (max-width: 480px) {
+        width: 121.71px;
+        height: 45.14px;
+    }
+
 `
 
 const Info = styled.div`
@@ -53,11 +67,21 @@ const Info = styled.div`
 const Icon = styled.div`
     color: white;
     margin-right: 5px;
+
+    font-size: 30px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 17px;
+    }
 `
 
 const Text = styled.p`  
-    font-size: 11.9px;
+    font-size: 20.82px;
     font-weight: 700;
+
+    @media screen and (max-width: 480px) {
+        font-size: 11.9px;
+    }
 `
 
 export {
