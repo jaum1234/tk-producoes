@@ -1,8 +1,9 @@
-import { ClientCards } from "../components"
 import { FaEye } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
-import { useState, useEffect } from "react";
 import { youtube } from "../apis";
+import { useState, useEffect } from "react";
+import ClientCards from "../components/ClientCards";
+import numberReducer from '../utils/number_reducer';
 
 const ClientCardsContainer = () => {
 
@@ -23,28 +24,32 @@ const ClientCardsContainer = () => {
 
         console.log(response);
 
-        if (response.data.items)
-            setClients(response.data.items);
-        
+        setClients(response.data.items);
     }, []);
 
     return(
+
         <ClientCards>
             {
                 clients.map(client => 
                     <ClientCards.Card key={ client.id }>
-                        
+                        <ClientCards.Banner 
+                            src={ client.snippet.thumbnails.high.url } 
+                            width={ 234.86 }
+                            height={ 156.57 }
+                            objectFit="cover"
+                        />
                         <ClientCards.Infos>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <FaEye/> }/>
                                 <ClientCards.Text>
-                                    { client.statistics && client.statistics.viewCount }
+                                    { client.statistics.viewCount }
                                 </ClientCards.Text>
                             </ClientCards.Info>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <MdGroups/> }/>
                                 <ClientCards.Text>
-                                    { client.statistics && client.statistics.subscriberCount }
+                                    { client.statistics.subscriberCount }
                                 </ClientCards.Text>
                             </ClientCards.Info>
                         </ClientCards.Infos>

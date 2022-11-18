@@ -1,12 +1,13 @@
 import {
     List, 
-    Box, 
-    Banner, 
+    Card, 
+    Banner,
     Infos, 
     Info, 
     Text,
     Icon
 } from './styles/ClientCards';
+import Image from "../Image";
 
 
 const ClientCards = ({ children, ...restProps }) => {
@@ -19,9 +20,9 @@ const ClientCards = ({ children, ...restProps }) => {
 
 ClientCards.Card = ({ children, ...restProps }) => {
     return(
-        <Box { ...restProps }>
+        <Card { ...restProps }>
             { children }
-        </Box>
+        </Card>
     )
 }
 

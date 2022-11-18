@@ -14,7 +14,7 @@ const List = styled.div`
     }
 ` 
 
-const Box = styled.div`
+const Card = styled.div`
     width: 234.86px;
     height: 156.57px;
     position: relative;
@@ -24,18 +24,14 @@ const Box = styled.div`
 `
 
 const Banner = styled(Image)`
-    height: 156.57px;
-    width: 234.86px;
-    object-fit: cover;
+    box-shadow: 0px 2.28571px 2.28571px rgba(0, 0, 0, 0.25);
 `
 
 const Infos = styled.div`
     width: 121.71px;
     height: 45.14px;
     border-radius: 2.86px;
-    background-color: ${themes.colors.call_to_action};
-
-    padding: 0 28px;
+    background: linear-gradient(180deg, #BA78FC 0%, #821CE9 100%);
     
     display: flex;
     flex-direction: column;
@@ -45,26 +41,30 @@ const Infos = styled.div`
 
     position: absolute;
     top: 90%;
+
 `
 
 const Info = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 `
 
 const Icon = styled.div`
     color: white;
+    margin-right: 5px;
 `
 
-const Text = styled.p`    
-    font-weight: bold;
+const Text = styled.p`  
+    font-size: 11.9px;
+    font-weight: 700;
 `
 
 export {
     List,
-    Box,
-    Infos,
+    Card,
     Banner,
+    Infos,
     Info,
     Text,
     Icon

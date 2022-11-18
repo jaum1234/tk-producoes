@@ -1,5 +1,5 @@
-import { SocialMedias } from "../components";
-import { socialMedias } from "../fixtures";
+import SocialMedias from "../components/SocialMedias";
+import socialMedias from "../fixtures/social_medias";
 
 const SocialMediasContainer = () => {
     return(

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import themes from '../src/styles/themes';
-import { Navbar } from '../src/containers';
+import Navbar from '../src/containers/navbar';
 import { Container } from '../src/layout';
 import { GlobalStyles } from '../src/styles/GlobalStyles';
 
@@ -14,13 +14,14 @@ const MainBackground = styled.div`
 `
 
 const SecundaryBackground = styled.div`
+
     background-color: ${themes.colors.light_purple};
     width: 100%;
-    height: 140vh;
+    height: 155vh;
     position: absolute;
-    top: 62%;
+    top: 50%;
     z-index: -1;
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
 `
 
 function MyApp({ Component, pageProps }) {

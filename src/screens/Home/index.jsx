@@ -3,7 +3,8 @@ import {
     HomeTitle, 
     HomeSection, 
     HomeSubtitle, 
-    HomeDescription 
+    HomeDescription, 
+    HomeButton
 } from './styles/Home';
 import Link from "../../components/Link";
 import PresentationVideo from "../../components/PresentationVideo";
@@ -18,18 +19,16 @@ const Home = () => {
         <HomeScreen>
             <HomeSection>
                 <HomeTitle>
-                    TK PRODUÇÕES 
+                    TK PRODUÇÕES <span>Ediçao de vídeos e imagens</span>
                 </HomeTitle>
-                <HomeDescription>
-                    Ediçao de vídeos e imagens
-                </HomeDescription>
+                
                 <PresentationVideo src={ videoUrl }/>
                 <Link 
                     href={"https://www.behance.net/joopedrogalvo"} 
                     target="_blank">
-                    <Button width={ "200px" }>
-                        Veja mais dos meus trabalhos
-                    </Button>
+                    <HomeButton>
+                        Veja mais dos<br/>meus trabalhos
+                    </HomeButton>
                 </Link>
             </HomeSection>
             <HomeSection>
@@ -39,8 +38,8 @@ const Home = () => {
             <HomeSection>
                 <HomeSubtitle>
                     Gostou do meu trabalho? <br/>
-                    Entre em contato pelas <br/>
-                    minhas redes sociais
+                    Entre em contato pelas 
+                    minhas redes sociais!
                 </HomeSubtitle>
                 <SocialMedias/>
             </HomeSection>

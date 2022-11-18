@@ -2,7 +2,6 @@ import Navbar from '../components/Navbar';
 import logo from '../../public/assets/img/logo_tkprod.png'
 import brazil_flag from '../../public/assets/img/brazil-flag.png'
 import usa_flag from '../../public/assets/img/united-states-of-america.png'
-import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const NavbarContainer = () => {

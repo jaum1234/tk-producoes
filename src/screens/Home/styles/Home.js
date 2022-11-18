@@ -1,47 +1,48 @@
-import styled from 'styled-components';
-import { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Button from '../../../components/Button';
-import Image from '../../../components/Image';
 import themes from '../../../styles/themes';
-
-const shine = keyframes`
-    to {
-        background-position: 200% center;
-    }
-`
 
 const HomeScreen = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 100px;
+    row-gap: 60px;
 `
 
 const HomeTitle = styled.h1`
+    display: flex;
+    flex-direction: column;
     color: ${themes.colors.light};
-    font-size: 32px;
+    font-size: 58.5px;
     text-align: center;
     font-weight: bold;
     margin-top: 55px;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+    }
 
     span {
-        color: ${themes.colors.red};
+        margin-top: 0.5rem;
         font-size: 25.58px;
         font-weight: normal;
 
-        background: linear-gradient(to right, #840032 20%, #A70040 40%, #EC005A 60%, #840032 80%);
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        animation: ${shine} 5s linear infinite;
-    }
+        @media screen and (max-width: 480px) {
+            font-size: 14px;
+        }
+    }   
 `
-
 const HomeButton = styled(Button)`
-    background-color: ${themes.colors.red};
-    width: 150px;
-    height: 45px;
+    background-color: ${themes.colors.call_to_action};
+    width: 317px;
+    height: 70px;
+    font-size: 24px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 15.5px;
+        width: 199px;
+        height: 44px;
+    }
 `
 
 const HomeSection = styled.section`   
@@ -66,10 +67,18 @@ const HomeDescription = styled.h2`
 
 const HomeSubtitle = styled.h2`
     font-weight: 700;
-    font-size: 20px;
     line-height: 24.2px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 52px;
+    font-size: 48px;
+    line-height: 58.09px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 20px;
+        line-height: 24.2px;
+        margin-bottom: 20px;
+    }
+    
 `
 
 export const HomeContentBox = styled.div`
