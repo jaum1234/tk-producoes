@@ -10,18 +10,24 @@ const MainBackground = styled.div`
     z-index: -2;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 140vh;
 `
 
 const SecundaryBackground = styled.div`
 
     background-color: ${themes.colors.light_purple};
     width: 100%;
-    height: 155vh;
     position: absolute;
-    top: 50%;
+    top: 95%;
+    clip-path: polygon(0 300px, 100% 0, 100% 100%, 0% 100%);
+
     z-index: -1;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    height: 145vh;
+
+    @media screen and (max-width: 480px) {
+        top: 50%;
+        height: 135vh;
+    }
 `
 
 function MyApp({ Component, pageProps }) {
