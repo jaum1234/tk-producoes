@@ -5,6 +5,7 @@ import themes from '../../../styles/themes';
 const HomeScreen = styled.div`
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto 550px auto;
     row-gap: 60px;
 `
 

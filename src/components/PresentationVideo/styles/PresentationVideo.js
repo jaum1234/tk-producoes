@@ -8,9 +8,15 @@ export const Container = styled.div`
 
 export const Video = styled.iframe`
     box-shadow: 0px 13px 24px -7px rgba(0,0,0,0.1);
-    width: 90%;
+    width: 950px;
     height: 547px;
     margin-bottom: 27.7px;
+    /* background-color: red; */
+
+    @media screen and (max-width: 1000px) {
+        width: 550px;
+        height: 316.68px;
+    }
 
     @media screen and (max-width: 600px) {
         width: 450px;

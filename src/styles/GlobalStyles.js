@@ -7,12 +7,13 @@ export const GlobalStyles = createGlobalStyle`
         color: ${themes.colors.light};
         font-family: ${themes.fonts.inter};
         scroll-behavior: smooth;
-        box-sizing: border-box;
+        box-sizing: border-box !important;
     }
 
     body {
         line-height: 1;
-        height: 100vh;
+        background-color: ${themes.colors.dark_purple};
+        position: relative;
     }
 
  

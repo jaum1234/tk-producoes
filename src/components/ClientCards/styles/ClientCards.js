@@ -8,8 +8,12 @@ const List = styled.div`
 
     grid-template-columns: 40% 40%;
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 1200px) {
         grid-template-columns: 1fr;
+        grid-template-rows: 400px;
+    }
+
+    @media screen and (max-width: 480px) {
         grid-template-rows: 220px;
     }
 ` 
@@ -27,6 +31,7 @@ const Card = styled.div`
         width: 234.86px;
         height: 156.57px;
     }
+
 `
 
 const Banner = styled(Image)`
