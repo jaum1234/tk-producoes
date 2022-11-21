@@ -54,7 +54,7 @@ const Infos = styled.div`
     box-shadow: 0px 2.28571px 2.28571px rgba(0, 0, 0, 0.25);
 
     position: absolute;
-    top: 90%;
+    top: 80%;
 
     @media screen and (max-width: 480px) {
         width: 121.71px;

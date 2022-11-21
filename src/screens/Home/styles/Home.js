@@ -4,9 +4,13 @@ import themes from '../../../styles/themes';
 
 const HomeScreen = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 550px auto;
-    row-gap: 60px;
+    row-gap: 150px;
+    padding-bottom: 50px;
+
+    @media screen and (max-width: 480px) {
+        row-gap: 80px;
+    }
+
 `
 
 const HomeTitle = styled.h1`
