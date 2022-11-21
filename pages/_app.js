@@ -14,10 +14,16 @@ const SecundaryBackground = styled.div`
     clip-path: polygon(0 300px, 100% 0, 100% 100%, 0% 100%);
 
     z-index: -1;
-    height: 125vh;
+    height: 70%;
+
+    @media screen and (max-width: 1200px) {
+        height: 75%;
+    }
+
 
     @media screen and (max-width: 480px) {
         clip-path: polygon(0 150px, 100% 0, 100% 100%, 0% 100%);
+        height: 80%;
     }
 `
 
@@ -25,7 +31,6 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <SecundaryBackground/>
-            {/* <MainBackground/> */}
             <Head>
                 <title>Home - Edição de vídeos e imagens - TK Produções</title>
             </Head>

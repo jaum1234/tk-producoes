@@ -20,8 +20,15 @@ const Link = styled(MyLink)`
 `
 
 const Icon = styled(Image)`
-    height: 41.48px;
-    width: 41.48px;
+
+    width: 59px;
+    height: 59px;
+
+    @media screen and (max-width: 480px) {
+        height: 41.48px;
+        width: 41.48px;
+    }
+    
 `
 
 export { List, Link, Icon };

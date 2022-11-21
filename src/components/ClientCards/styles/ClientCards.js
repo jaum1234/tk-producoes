@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import themes from "../../../styles/themes";
 import Image from '../../Image';
 
 const List = styled.div`

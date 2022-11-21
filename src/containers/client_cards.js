@@ -5,30 +5,8 @@ import { useState, useEffect } from "react";
 import ClientCards from "../components/ClientCards";
 import numberReducer from '../utils/number_reducer';
 
-const ClientCardsContainer = () => {
-
-    const [clients, setClients] = useState([]);
-
-    useEffect(async () => {
-
-        const response = await youtube.get("/channels", {
-            id: [
-                "UCY_xadtZDqFtUfd5LGsJLvw",
-                "UC17wnw7BfA_z3AzcO_71Mrw"
-            ],
-            part: [
-                "statistics",
-                "snippet"
-            ]
-        });
-
-        console.log(response);
-
-        setClients(response.data.items);
-    }, []);
-
+const ClientCardsContainer = ({ clients }) => {
     return(
-
         <ClientCards>
             {
                 clients.map(client => 
