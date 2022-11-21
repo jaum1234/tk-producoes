@@ -1,18 +1,11 @@
-import Image from 'next/image';
 import styled from 'styled-components';
-import { keyframes } from 'styled-components'
-
-const rotate = keyframes`
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-`
 
 export const Box = styled.div`
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     box-shadow: ${props => props.boxShadow || "none"};
 
     margin: ${props => props.m};
@@ -21,5 +14,7 @@ export const Box = styled.div`
     margin-left: ${props => props.ml};
     margin-right: ${props => props.mr};
 
-    animation: ${rotate} 5s linear infinite
+    opacity: ${props => props.opacity};
+
+    
 `

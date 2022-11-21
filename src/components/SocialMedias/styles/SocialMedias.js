@@ -1,22 +1,34 @@
 import styled from "styled-components";
+import Image from "../../Image";
+import MyLink from "../../Link";
 
-export const List = styled.ul`
+const List = styled.div`
     display: flex;
+    justify-content: center;
     list-style: none;
 `
 
-export const Link = styled.a`
-    color: white;
+const Link = styled(MyLink)`
     cursor: pointer;
     margin: 0 0.8rem;
     transition: 0.2s ease-in-out;
+    font-size: 25px;  
 
     &:hover {
-        color: #7E328B;
+        filter: brightness(110%);
     }
 `
 
-export const Icon = styled.li`
-    font-size: 2rem;
-    margin-bottom: 1rem;
+const Icon = styled(Image)`
+
+    width: 59px;
+    height: 59px;
+
+    @media screen and (max-width: 480px) {
+        height: 41.48px;
+        width: 41.48px;
+    }
+    
 `
+
+export { List, Link, Icon };
