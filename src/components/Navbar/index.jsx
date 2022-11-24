@@ -80,9 +80,11 @@ Navbar.Languages = function NavbarLanguages({ children, ...restProps }) {
     )
 }
 
-Navbar.Language = function NavbarLanguage({ src, ...restProps }) {
+Navbar.Language = function NavbarLanguage({ src, href, locale, ...restProps }) {
     return(
-        <Language src={ src } { ...restProps }/>
+        <Link href={ href } locale={ locale }>
+            <Language src={ src } { ...restProps }/>
+        </Link>
     )
 }
 

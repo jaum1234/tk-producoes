@@ -122,7 +122,7 @@ const Ham = styled(AiOutlineMenu)`
 
 const Overlay = styled.div`
     background-color: black;
-    height: 100vh;
+    height: 95%;
     width: 100%;
     position: absolute;
     z-index: 1;

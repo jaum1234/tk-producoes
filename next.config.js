@@ -7,6 +7,10 @@ const nextConfig = {
         domains: [
             "yt3.ggpht.com"
         ]
+    },
+    i18n: {
+        locales: ["en-US", "pt-BR"],
+        defaultLocale: "pt-BR"
     }
 }
 

@@ -1,32 +1,53 @@
 import Navbar from '../components/Navbar';
-import logo from '../../public/assets/img/logo_tkprod.png'
-import brazil_flag from '../../public/assets/img/brazil-flag.png'
-import usa_flag from '../../public/assets/img/united-states-of-america.png'
+
 import { useState } from 'react';
+import { useRouter } from "next/router";
+import { useEffect } from 'react';
+import navbarFixtures from '../fixtures/navbar';
 
 const NavbarContainer = () => {
 
     const [ collapse, setCollapse ] = useState(false);
+    const { locale, locales, asPath } = useRouter();
 
     const collapseMenu = () => {
         setCollapse(prev => !prev);
     }
 
+    useEffect(() => {
+        console.log(locale);
+    }, [locale])
+
     return(
         <>
             <Navbar>
                 <Navbar.Box>
-                    <Navbar.Brand src={ logo }/>
+                    <Navbar.Brand src={ navbarFixtures.logo }/>
                     <Navbar.Ham onOpen={ collapseMenu }/>
                     <Navbar.Collapse collapse={ collapse }>
                         <Navbar.Nav>
-                            <Navbar.Item href='/'>Home</Navbar.Item>
-                            <Navbar.Item href='/sobre-mim'>Sobre mim</Navbar.Item>
+                            {
+                                navbarFixtures.navigation.items.map(({ id, url, label }) => 
+                                    <Navbar.Item key={ id } href={ url }>
+                                        { label }
+                                    </Navbar.Item>
+                                )
+                            }
                         </Navbar.Nav>
                         <Navbar.Divider/>
                         <Navbar.Languages>
-                            <Navbar.Language src={ brazil_flag } width={ 40 } height={ 40 }/>
-                            <Navbar.Language src={ usa_flag }  width={ 40 } height={ 40 }/>
+                            { 
+                                navbarFixtures.languages.map(({ id, src, locale }) =>
+                                    <Navbar.Language 
+                                        key={ id }
+                                        src={ src }
+                                        href={ asPath }
+                                        locale={ locale } 
+                                        width={ 40 } 
+                                        height={ 40 }
+                                    />
+                                ) 
+                            }
                         </Navbar.Languages>
                     </Navbar.Collapse>
                 </Navbar.Box>

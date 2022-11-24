@@ -12,6 +12,7 @@ import ClientCards  from "../../containers/client_cards";
 import SocialMedias from "../../containers/social_medias";
 import { useEffect, useState } from 'react';
 import youtube from "../../apis/youtube";
+import { useRouter } from 'next/router';
 
 
 const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay=1&muted=1&loop=1'
@@ -19,6 +20,7 @@ const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay
 const Home = () => {
 
     const [clients, setClients] = useState([]);
+    const { locale, locales, asPath } = useRouter();
 
     useEffect(async () => {
 
