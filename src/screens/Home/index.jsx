@@ -7,12 +7,12 @@ import {
 } from './styles/Home';
 import Link from "../../components/Link";
 import PresentationVideo from "../../components/PresentationVideo";
-import Button from "../../components/Button";
 import ClientCards  from "../../containers/client_cards";
 import SocialMedias from "../../containers/social_medias";
 import { useEffect, useState } from 'react';
 import youtube from "../../apis/youtube";
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
+import homeFixtures from '../../fixtures/home';
 
 
 const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay=1&muted=1&loop=1'
@@ -20,7 +20,7 @@ const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay
 const Home = () => {
 
     const [clients, setClients] = useState([]);
-    const { locale, locales, asPath } = useRouter();
+    const { locale } = useRouter();
 
     useEffect(async () => {
 
@@ -43,29 +43,58 @@ const Home = () => {
     return (
         <HomeScreen>
             <HomeSection>
-                <HomeTitle>
-                    TK PRODUÇÕES <span>Ediçao de vídeos e imagens</span>
-                </HomeTitle>
-                
+                { 
+                    homeFixtures.entrySection.title.texts
+                        .filter(text => text.locale === locale)
+                        .map(({ id, primary, secondary }) => 
+                                <HomeTitle key={ id }>
+
+                                    { primary }
+                                    <span>
+                                        { secondary }
+                                    </span>
+                                </HomeTitle>
+                            )
+                        
+                }
                 <PresentationVideo src={ videoUrl }/>
                 <Link 
-                    href={"https://www.behance.net/joopedrogalvo"} 
+                    href={ homeFixtures.entrySection.button.href } 
                     target="_blank">
-                    <HomeButton>
-                        Veja mais dos<br/>meus trabalhos
-                    </HomeButton>
+                        {
+                            homeFixtures.entrySection.button.labels
+                                .filter(label => label.locale === locale)
+                                .map(({ id, text }) => 
+                                    <HomeButton key={ id } onClick={() => Router.push}>
+                                        { text }
+                                    </HomeButton>
+                                )
+                        }
                 </Link>
             </HomeSection>
             <HomeSection>
-                <HomeSubtitle>Pessoas para <br/> quem já trabalhei:</HomeSubtitle>
+                {
+                    homeFixtures.clientsSection.subtitles
+                        .filter(subtitle => subtitle.locale === locale)
+                        .map(({ id, text }) => 
+                            <HomeSubtitle key={ id }>
+                                { text }
+                            </HomeSubtitle>
+                        )
+                }
                 <ClientCards clients={ clients }/>
             </HomeSection>
             <HomeSection>
-                <HomeSubtitle>
-                    Gostou do meu trabalho? <br/>
-                    Entre em contato pelas 
-                    minhas redes sociais!
-                </HomeSubtitle>
+                {
+                    homeFixtures.contactSection.subtitles
+                        .filter(subtitle => subtitle.locale === locale)
+                        .map(({ id, text }) => 
+                            <HomeSubtitle key={ id }>
+                                { text }
+                            </HomeSubtitle>
+                        )
+                }
+
                 <SocialMedias/>
             </HomeSection>
         </HomeScreen>

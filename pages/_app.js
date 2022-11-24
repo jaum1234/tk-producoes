@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <SecundaryBackground/>
             <Head>
-                <title>Home - Edição de vídeos e imagens - TK Produções</title>
+                <title>Edição de vídeos e imagens - TK Produções</title>
             </Head>
             <GlobalStyles/>
             <Navbar/>

@@ -31,6 +31,7 @@ const HomeTitle = styled.h1`
         margin-top: 0.5rem;
         font-size: 25.58px;
         font-weight: normal;
+        
 
         @media screen and (max-width: 480px) {
             font-size: 14px;

@@ -1,22 +1,18 @@
 import Navbar from '../components/Navbar';
-
-import { useState } from 'react';
-import { useRouter } from "next/router";
-import { useEffect } from 'react';
 import navbarFixtures from '../fixtures/navbar';
+import { useState, useEffect } from 'react';
+import { useRouter } from "next/router";
+import Link from '../components/Link';
 
 const NavbarContainer = () => {
 
     const [ collapse, setCollapse ] = useState(false);
-    const { locale, locales, asPath } = useRouter();
+    const router = useRouter();
+    const { asPath } = router;
 
     const collapseMenu = () => {
         setCollapse(prev => !prev);
     }
-
-    useEffect(() => {
-        console.log(locale);
-    }, [locale])
 
     return(
         <>
@@ -38,14 +34,16 @@ const NavbarContainer = () => {
                         <Navbar.Languages>
                             { 
                                 navbarFixtures.languages.map(({ id, src, locale }) =>
-                                    <Navbar.Language 
-                                        key={ id }
-                                        src={ src }
-                                        href={ asPath }
-                                        locale={ locale } 
-                                        width={ 40 } 
-                                        height={ 40 }
-                                    />
+                                    
+                                        <Navbar.Language 
+                                            key={ id }
+                                            src={ src }
+                                            width={ 40 } 
+                                            height={ 40 }
+                                            onClick={() => {
+                                                router.push(asPath, asPath, { locale })
+                                            }}
+                                        />
                                 ) 
                             }
                         </Navbar.Languages>
