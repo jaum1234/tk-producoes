@@ -24,7 +24,6 @@ class Request
             }
         }
 
-        console.log(fullURL);
         
         return await axios.get(
             fullURL, 

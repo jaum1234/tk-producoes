@@ -36,7 +36,6 @@ const Home = () => {
             ]
         });
 
-        console.log(response);
 
         setClients(response.data.items);
     }, []);

@@ -15,6 +15,10 @@ const NavbarContainer = () => {
         setCollapse(prev => !prev);
     }
 
+    const filterNav = () => {
+
+    }
+
     return(
         <>
             <Navbar>
@@ -27,39 +31,35 @@ const NavbarContainer = () => {
                         <Navbar.Ham onOpen={ collapseMenu }/>
                         <Navbar.Collapse collapse={ collapse }>
                             <Navbar.Nav>
-                                {
-                                    navbarFixtures.navigation.items
-                                        .filter(item => {
-                                            if (item.locale === locale) {
-                                                return item.links;
-                                            }
-                                        })
-                                        .map(({id, label, url}) =>
+                            {
+                                navbarFixtures.navigation.items
+                                    .filter(item => item.locale === locale)
+                                    .map(({ links }) => 
+                                        links.map(({ id , url, label }) => 
                                             <Navbar.Item key={ id } href={ url }>
                                                 { label }
                                             </Navbar.Item>
                                         )
-                                        
-                                        
-                                   
-                                }
+                                    )
+                                    
+                            }
                             </Navbar.Nav>
                             <Navbar.Divider/>
                             <Navbar.Languages>
-                                { 
-                                    navbarFixtures.languages.map(({ id, src, locale }) =>
-                                    
+                            { 
+                                navbarFixtures.languages.map(({ id, src, locale }) =>
+                                
                                     <Navbar.Language 
-                                    key={ id }
-                                    src={ src }
-                                    width={ 40 } 
-                                    height={ 40 }
-                                    onClick={() => {
-                                        router.push(asPath, asPath, { locale })
-                                    }}
+                                        key={ id }
+                                        src={ src }
+                                        width={ 40 } 
+                                        height={ 40 }
+                                        onClick={() => {
+                                            router.push(asPath, asPath, { locale })
+                                        }}
                                     />
-                                    ) 
-                                }
+                                ) 
+                            }
                             </Navbar.Languages>
                         </Navbar.Collapse>
                     </Navbar.Box>
