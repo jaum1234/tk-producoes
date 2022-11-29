@@ -128,7 +128,7 @@ const Overlay = styled.div`
     height: 176%;
 
     @media screen and (min-width: 480px) and (max-width: 575px) {
-        height: 325%;
+        height: 290%;
     }
 
     @media screen and (min-width: 575px) {

@@ -15,10 +15,6 @@ const NavbarContainer = () => {
         setCollapse(prev => !prev);
     }
 
-    const filterNav = () => {
-
-    }
-
     return(
         <>
             <Navbar>

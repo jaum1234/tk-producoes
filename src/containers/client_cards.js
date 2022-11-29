@@ -1,11 +1,9 @@
 import { FaEye } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
-import { youtube } from "../apis";
-import { useState, useEffect } from "react";
 import ClientCards from "../components/ClientCards";
-import numberReducer from '../utils/number_reducer';
 
 const ClientCardsContainer = ({ clients }) => {
+
     return(
         <ClientCards>
             {
@@ -21,13 +19,17 @@ const ClientCardsContainer = ({ clients }) => {
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <FaEye/> }/>
                                 <ClientCards.Text>
-                                    { client.statistics.viewCount }
+                                    { 
+                                        client.statistics.viewCount  
+                                    }
                                 </ClientCards.Text>
                             </ClientCards.Info>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <MdGroups/> }/>
                                 <ClientCards.Text>
-                                    { client.statistics.subscriberCount }
+                                    { 
+                                        client.statistics.subscriberCount 
+                                    }
                                 </ClientCards.Text>
                             </ClientCards.Info>
                         </ClientCards.Infos>

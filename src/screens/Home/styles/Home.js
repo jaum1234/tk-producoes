@@ -23,6 +23,10 @@ const HomeTitle = styled.h1`
     margin-top: 55px;
     margin-bottom: 1rem;
 
+    @media screen and (max-width: 575px) {
+        font-size: 40px;
+    }
+
     @media screen and (max-width: 480px) {
         font-size: 32px;
     }
@@ -32,6 +36,9 @@ const HomeTitle = styled.h1`
         font-size: 25.58px;
         font-weight: normal;
         
+        @media screen and (max-width: 575px) {
+            font-size: 20px;
+        }
 
         @media screen and (max-width: 480px) {
             font-size: 14px;
@@ -42,7 +49,8 @@ const HomeButton = styled(Button)`
     background-color: ${themes.colors.call_to_action};
     width: 317px;
     height: 70px;
-    font-size: 24px;
+    font-size: 20px;
+    line-break: strict;
 
     @media screen and (max-width: 480px) {
         font-size: 15.5px;
@@ -78,6 +86,12 @@ const HomeSubtitle = styled.h2`
     margin-bottom: 52px;
     font-size: 48px;
     line-height: 58.09px;
+
+    @media screen and (max-width: 575px) {
+        font-size: 30px;
+        line-height: 35px;
+
+    }
 
     @media screen and (max-width: 480px) {
         font-size: 20px;
