@@ -21,7 +21,6 @@ const Brand = styled(Image)`
 `
 
 const Box = styled.div`
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,11 +121,20 @@ const Ham = styled(AiOutlineMenu)`
 
 const Overlay = styled.div`
     background-color: black;
-    height: 95%;
     width: 100%;
     position: absolute;
     z-index: 1;
     transition: all 0.2s ease-in-out;
+    height: 176%;
+
+    @media screen and (min-width: 480px) and (max-width: 575px) {
+        height: 325%;
+    }
+
+    @media screen and (min-width: 575px) {
+        display: none;
+    }
+  
 `
 
 export { Header , Brand, Box, Nav, Item, Divider, Languages, Language, Collapse, Ham, Overlay };

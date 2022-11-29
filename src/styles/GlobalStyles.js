@@ -13,7 +13,6 @@ export const GlobalStyles = createGlobalStyle`
     body {
         line-height: 1;
         background-color: ${themes.colors.dark_purple};
-        position: relative;
     }
 
  

@@ -3,12 +3,13 @@ import navbarFixtures from '../fixtures/navbar';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import Link from '../components/Link';
+import { Slide } from 'react-awesome-reveal';
 
 const NavbarContainer = () => {
 
     const [ collapse, setCollapse ] = useState(false);
     const router = useRouter();
-    const { asPath } = router;
+    const { asPath, locale } = router;
 
     const collapseMenu = () => {
         setCollapse(prev => !prev);
@@ -17,38 +18,52 @@ const NavbarContainer = () => {
     return(
         <>
             <Navbar>
-                <Navbar.Box>
-                    <Navbar.Brand src={ navbarFixtures.logo }/>
-                    <Navbar.Ham onOpen={ collapseMenu }/>
-                    <Navbar.Collapse collapse={ collapse }>
-                        <Navbar.Nav>
-                            {
-                                navbarFixtures.navigation.items.map(({ id, url, label }) => 
-                                    <Navbar.Item key={ id } href={ url }>
-                                        { label }
-                                    </Navbar.Item>
-                                )
-                            }
-                        </Navbar.Nav>
-                        <Navbar.Divider/>
-                        <Navbar.Languages>
-                            { 
-                                navbarFixtures.languages.map(({ id, src, locale }) =>
+                <Slide 
+                    direction="down"
+                    triggerOnce="true"
+                >
+                    <Navbar.Box>
+                        <Navbar.Brand src={ navbarFixtures.logo }/>
+                        <Navbar.Ham onOpen={ collapseMenu }/>
+                        <Navbar.Collapse collapse={ collapse }>
+                            <Navbar.Nav>
+                                {
+                                    navbarFixtures.navigation.items
+                                        .filter(item => {
+                                            if (item.locale === locale) {
+                                                return item.links;
+                                            }
+                                        })
+                                        .map(({id, label, url}) =>
+                                            <Navbar.Item key={ id } href={ url }>
+                                                { label }
+                                            </Navbar.Item>
+                                        )
+                                        
+                                        
+                                   
+                                }
+                            </Navbar.Nav>
+                            <Navbar.Divider/>
+                            <Navbar.Languages>
+                                { 
+                                    navbarFixtures.languages.map(({ id, src, locale }) =>
                                     
-                                        <Navbar.Language 
-                                            key={ id }
-                                            src={ src }
-                                            width={ 40 } 
-                                            height={ 40 }
-                                            onClick={() => {
-                                                router.push(asPath, asPath, { locale })
-                                            }}
-                                        />
-                                ) 
-                            }
-                        </Navbar.Languages>
-                    </Navbar.Collapse>
-                </Navbar.Box>
+                                    <Navbar.Language 
+                                    key={ id }
+                                    src={ src }
+                                    width={ 40 } 
+                                    height={ 40 }
+                                    onClick={() => {
+                                        router.push(asPath, asPath, { locale })
+                                    }}
+                                    />
+                                    ) 
+                                }
+                            </Navbar.Languages>
+                        </Navbar.Collapse>
+                    </Navbar.Box>
+                </Slide>
             </Navbar>
             <Navbar.Overlay collapse={ collapse }/>
         </>

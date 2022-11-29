@@ -7,15 +7,37 @@ const navbarFixtures = {
     navigation: {
         items: [
             {
-                id: 1,
-                label: "Home",
-                url: "/",
+                locale: "pt-BR",
+                links: [
+                    {
+                        id: 1,
+                        label: "Home",
+                        url: "/",
+                    },
+                    {
+                        id: 2,
+                        label: "Sobre mim",
+                        url: "/sobre-mim"
+                    }
+                ]
             },
             {
-                id: 2,
-                label: "Sobre mim",
-                url: "/sobre-mim"
+                locale: "en-US",
+                links: [
+                    {
+                        id: 1,
+                        label: "Home",
+                        url: "/",
+                    },
+                    {
+                        id: 2,
+                        label: "About me",
+                        url: "/sobre-mim"
+                    }
+                ]
             }
+          
+            
         ]
     },
     languages: [
