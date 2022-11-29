@@ -1,11 +1,10 @@
-# TK Produçoes
-## [Live Site](https://tk-producoes.vercel.app/)
+# TK Produções
+## [Live Site](https://www.tkprod.com.br/)
 Personal webiste made for the video editor TK Produçoes
 
-He doesn't have a domain yet :c.
 
-<img src='https://i.gyazo.com/b023308402a1f933d562a300ec3ec394.png' width='600px'/>
+<img src='https://i.gyazo.com/eb134f1b7d97155a7be05db12015db6e.jpg' width='600px'/>
 
 ## Some technologies used
-- ReactJS
+- Next.js
 - Styled Components
