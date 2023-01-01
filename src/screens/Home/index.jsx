@@ -28,7 +28,9 @@ const Home = () => {
         const response = await youtube.get("/channels", {
             id: [
                 "UCY_xadtZDqFtUfd5LGsJLvw",
-                "UC17wnw7BfA_z3AzcO_71Mrw"
+                "UC17wnw7BfA_z3AzcO_71Mrw",
+                "UCmFAfMlZ7sCdMOVRapvdngA",
+                "UCEfGV5hx2VrXl4jOUnG0MRQ"
             ],
             part: [
                 "statistics",
