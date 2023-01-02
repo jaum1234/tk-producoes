@@ -28,12 +28,12 @@ const Card = styled.div`
     justify-content: center;
     margin: 0 auto;
 
-    @media screen and (max-width: 480px) {
+    /* @media screen and (max-width: 480px) {
         width: ${convertToRem(234.86)};
         height: ${convertToRem(156.57)};
-    }
+    } */
 
-    //${console.log(forMobile({"width": `${convertToRem(234.86)}`,"height": `${convertToRem(156.57)}`}))}
+    ${forMobile({"width": `${convertToRem(234.86)}`,"height": `${convertToRem(156.57)}`})}
 
 `
 
@@ -81,6 +81,8 @@ const Icon = styled.div`
     @media screen and (max-width: 480px) {
         font-size: ${convertToRem(17)};
     }
+
+    
 `
 
 const Text = styled.p`  
