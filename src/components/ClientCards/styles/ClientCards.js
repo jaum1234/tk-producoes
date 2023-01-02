@@ -28,37 +28,37 @@ const Card = styled.div`
     margin: 0 auto;
 
     @media screen and (max-width: 480px) {
-        width: 234.86px;
-        height: 156.57px;
+        width: ${convertToRem(234.86)};
+        height: ${convertToRem(156.57)};
     }
 
 `
 
 const Banner = styled(Image)`
 
-    box-shadow: 0px 2.28571px 2.28571px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px ${convertToRem(2.28571)} ${convertToRem(2.28571)} rgba(0, 0, 0, 0.25);
 `
 
 const Infos = styled.div`
    
-    width: 213px;
-    height: 79px;
+    width: ${convertToRem(213)};
+    height: ${convertToRem(79)};
 
-    border-radius: 2.86px;
+    border-radius: ${convertToRem(2.86)};
     background: linear-gradient(180deg, #BA78FC 0%, #821CE9 100%);
     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 2.28571px 2.28571px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px ${convertToRem(2.28571)} ${convertToRem(2.28571)} rgba(0, 0, 0, 0.25);
 
     position: absolute;
     top: 80%;
 
     @media screen and (max-width: 480px) {
-        width: 121.71px;
-        height: 45.14px;
+        width: ${convertToRem(121.71)};
+        height: ${convertToRem(45.14)};
     }
 
 `
@@ -71,21 +71,21 @@ const Info = styled.div`
 
 const Icon = styled.div`
     color: white;
-    margin-right: 5px;
+    margin-right: ${convertToRem(5)};
 
-    font-size: 30px;
+    font-size: ${convertToRem(30)};
 
     @media screen and (max-width: 480px) {
-        font-size: 17px;
+        font-size: ${convertToRem(17)};
     }
 `
 
 const Text = styled.p`  
-    font-size: 20.82px;
+    font-size: ${convertToRem(20.82)};
     font-weight: 700;
 
     @media screen and (max-width: 480px) {
-        font-size: 11.9px;
+        font-size: ${convertToRem(11.9)};
     }
 `
 
