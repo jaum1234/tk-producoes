@@ -1,26 +1,27 @@
 import styled from "styled-components";
 import Image from '../../Image';
+import { convertToRem } from "../../../styles/functions";
 
 const List = styled.div`
     display: Grid;
     justify-content: center;
 
     grid-template-columns: 40% 40%;
-    row-gap: 100px;
+    row-gap: ${convertToRem(100)};
 
     @media screen and (max-width: 1200px) {
         grid-template-columns: 1fr;
     }
 
     @media screen and (max-width: 480px) {
-        row-gap: 60px;
+        row-gap: ${convertToRem(60)};
     }
 ` 
 
 const Card = styled.div`
    
-    width: 411px;
-    height: 274px;
+    width: ${convertToRem(411)};
+    height: ${convertToRem(274)};
     position: relative;
     display: flex;
     justify-content: center;
