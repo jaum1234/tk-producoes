@@ -6,14 +6,14 @@ const List = styled.div`
     justify-content: center;
 
     grid-template-columns: 40% 40%;
+    row-gap: 100px;
 
     @media screen and (max-width: 1200px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 400px;
     }
 
     @media screen and (max-width: 480px) {
-        grid-template-rows: 220px;
+        row-gap: 60px;
     }
 ` 
 
