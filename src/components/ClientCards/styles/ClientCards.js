@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from '../../Image';
-import { convertToRem } from "../../../styles/functions";
+import { forMobile } from "../../../styles/media_queries";
+import { convertToRem } from "../../../styles/utils";
 
 const List = styled.div`
     display: Grid;
@@ -31,6 +32,8 @@ const Card = styled.div`
         width: ${convertToRem(234.86)};
         height: ${convertToRem(156.57)};
     }
+
+    //${console.log(forMobile({"width": `${convertToRem(234.86)}`,"height": `${convertToRem(156.57)}`}))}
 
 `
 
