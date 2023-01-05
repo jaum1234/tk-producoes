@@ -4,6 +4,18 @@ import ClientCards from "../components/ClientCards";
 
 const ClientCardsContainer = ({ clients }) => {
 
+    const reduceNumber = (number) => {
+        if (number >= 1000 && number < 1000000) {
+ 	    return String(Math.trunc(number/1000)) + "K";
+	} 
+	
+	if (number >= 1000000) {
+	    return String(Math.trunc(number/1000000)) + "M";
+	}
+
+	return number;
+    };
+
     return(
         <ClientCards>
             {
@@ -28,7 +40,7 @@ const ClientCardsContainer = ({ clients }) => {
                                 <ClientCards.Icon icon={ <MdGroups/> }/>
                                 <ClientCards.Text>
                                     { 
-                                        client.statistics.subscriberCount 
+                                        reduceNumber(client.statistics.subscriberCount) 
                                     }
                                 </ClientCards.Text>
                             </ClientCards.Info>
