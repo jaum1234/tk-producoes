@@ -13,6 +13,7 @@ import {
     Box,
     Overlay
 } from "./styles/Navbar";
+import themes from "../../styles/themes.js";
 
 
 
@@ -58,9 +59,13 @@ Navbar.Nav = function NavbarNav({ children, ...restProps }) {
     )
 }
 
-Navbar.Item = function NavbarItem({ children, href, ...restProps }) {
+Navbar.Item = function NavbarItem({ children, href, active = false, ...restProps }) {
+    
+    console.log(active);
+
     return(
-        <Item href={ href } { ...restProps }>
+
+        <Item href={ href } active={ active ? themes.colors.call_to_action : themes.colors.light } { ...restProps }>
             { children }
         </Item>
     )
