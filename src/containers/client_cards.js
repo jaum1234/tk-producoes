@@ -1,20 +1,43 @@
+import { useState, useEffect } from 'react';
 import { FaEye } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 import ClientCards from "../components/ClientCards";
 
 const ClientCardsContainer = ({ clients }) => {
 
+    const [views, setViews] = useState(0);
+
     const reduceNumber = (number) => {
         if (number >= 1000 && number < 1000000) {
  	    return String(Math.trunc(number/1000)) + "K";
-	} 
+	    }    
 	
-	if (number >= 1000000) {
-	    return String(Math.trunc(number/1000000)) + "M";
-	}
+        if (number >= 1000000) {
+            return String(Math.trunc(number/1000000)) + "M";
+        }
 
-	return number;
+	    return number;
     };
+
+    // useEffect(() => {
+
+    // });
+
+    // useEffect(() => {
+        
+    //     const viewsIncrement = setInterval(() => {
+    //         setViews(prev => prev + 1);
+
+    //         if (views === client.statistics.viewCount) {
+
+    //             clearInterval(viewsIncrement);
+    //             return;
+    //         }
+    //     }, 500)
+
+    //     return () => clearInterval(viewsIncrement);
+
+    // }, [views]);
 
     return(
         <ClientCards>
