@@ -5,40 +5,6 @@ import ClientCards from "../components/ClientCards";
 
 const ClientCardsContainer = ({ clients }) => {
 
-    const [views, setViews] = useState(0);
-
-    const reduceNumber = (number) => {
-        if (number >= 1000 && number < 1000000) {
- 	    return String(Math.trunc(number/1000)) + "K";
-	    }    
-	
-        if (number >= 1000000) {
-            return String(Math.trunc(number/1000000)) + "M";
-        }
-
-	    return number;
-    };
-
-    // useEffect(() => {
-
-    // });
-
-    // useEffect(() => {
-        
-    //     const viewsIncrement = setInterval(() => {
-    //         setViews(prev => prev + 1);
-
-    //         if (views === client.statistics.viewCount) {
-
-    //             clearInterval(viewsIncrement);
-    //             return;
-    //         }
-    //     }, 500)
-
-    //     return () => clearInterval(viewsIncrement);
-
-    // }, [views]);
-
     return(
         <ClientCards>
             {
@@ -53,19 +19,11 @@ const ClientCardsContainer = ({ clients }) => {
                         <ClientCards.Infos>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <FaEye/> }/>
-                                <ClientCards.Text>
-                                    { 
-                                        client.statistics.viewCount  
-                                    }
-                                </ClientCards.Text>
+                                <ClientCards.Statistic statistics={ client.statistics.viewCount }/>
                             </ClientCards.Info>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <MdGroups/> }/>
-                                <ClientCards.Text>
-                                    { 
-                                        reduceNumber(client.statistics.subscriberCount) 
-                                    }
-                                </ClientCards.Text>
+                                <ClientCards.Statistic statistics={ client.statistics.subscriberCount }/>
                             </ClientCards.Info>
                         </ClientCards.Infos>
                     </ClientCards.Card>

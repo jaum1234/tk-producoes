@@ -1,9 +1,14 @@
-const numberReducer = (value) => {
-    if (value > 1000) {
-        value /= 1000
-    } 
+const numberReducer = (number) => {
+    if (number >= 1000) {
+        return String(Math.trunc(number/1000)) + "K";
+    }    
 
-    return Math.floor(value);
+    // if (number > 1000000) {
+    //     return String(Math.trunc(number/1000000)) + "M";
+    // }
+
+    return number;
+    
 }
 
 export default numberReducer;
