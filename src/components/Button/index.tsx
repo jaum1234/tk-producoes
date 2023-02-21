@@ -1,6 +1,11 @@
 import { StyledButton } from './styles/Button';
 
-const Button = ({ children, onClick, ...restProps }) => {
+type ButtonProps = {
+    children: JSX.Element,
+    onClick: () => void
+}
+
+const Button = ({ children, onClick, ...restProps }: ButtonProps) => {
     return(
         <StyledButton 
             { ...restProps } 

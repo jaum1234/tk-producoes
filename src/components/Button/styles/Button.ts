@@ -2,7 +2,7 @@ import styled from "styled-components";
 import themes from "../../../styles/themes";
 
 type ButtonProps = {
-    width: number | string
+    width?: number | string
 }
 
 export const StyledButton = styled.button`    
