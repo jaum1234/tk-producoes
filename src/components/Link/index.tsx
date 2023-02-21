@@ -1,6 +1,13 @@
 import NextLink from 'next/link';
 
-const Link = ({ children, href, target, locale, ...restProps }) => {
+type LinkProps = {
+    children: JSX.Element,
+    href?: string | undefined | any,
+    target?: any,
+    locale?: string | false | undefined
+}
+
+const Link = ({ children, href, target, locale, ...restProps }: LinkProps) => {
     return (
         <NextLink href={ href } locale={ locale }> 
             <a { ...restProps } target={ target }>
