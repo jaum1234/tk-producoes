@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 
-export const Box = styled.div`
+type BoxProps = {
+    boxShadow?: string | "none", 
+    m?: string,
+    mt?: string,
+    mb?: string,
+    ml?: string,
+    mr?: string,
+    opacity?: string
+}
+
+export const Box = styled.div<BoxProps>`
 
     display: flex;
     justify-content: flex-start;

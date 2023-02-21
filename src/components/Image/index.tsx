@@ -1,7 +1,15 @@
 import { Box } from './styles/Image';
 import NextImage from 'next/image';
 
-const Image = ({ src, alt, width, height, objectFit, ...restProps }) => {
+type ImageProps = {
+    src: string,
+    alt?: string | undefined,
+    width?: string | number | undefined,
+    height?: string | number | undefined,
+    objectFit?: any
+}
+
+const Image = ({ src, alt, width, height, objectFit, ...restProps }: ImageProps) => {
     return(
         <Box { ...restProps }>
             <NextImage 
