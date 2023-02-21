@@ -7,10 +7,10 @@ const List = styled.div`
     display: Grid;
     justify-content: center;
 
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 33% 33% 33%;
     row-gap: ${convertToRem(100)};
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1400px) {
         grid-template-columns: 1fr;
     }
 
