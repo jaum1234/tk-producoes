@@ -1,4 +1,4 @@
-const forMobile = (styles) => {
+const forMobile = (styles: any) => {
 
     let formatedStyles = ``;
 

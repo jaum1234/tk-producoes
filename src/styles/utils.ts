@@ -1,4 +1,4 @@
-const convertToRem = (pixel) => {
+const convertToRem = (pixel: number) => {
     return 0.063*pixel + "rem";
 }
 
