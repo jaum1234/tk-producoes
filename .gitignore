@@ -24,3 +24,5 @@ yarn-error.log*
 
 /.next
 /.idea
+
+next-env.d.ts
