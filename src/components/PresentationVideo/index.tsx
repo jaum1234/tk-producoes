@@ -1,7 +1,12 @@
 
 import { Container, Video } from './styles/PresentationVideo';
 
-const PresentationVideo = ({ src, id }) => {
+type PresentationVideoProps = {
+    id: any,
+    src: string
+}
+
+const PresentationVideo = ({ src, id }: PresentationVideoProps) => {
     return (
         <Container >
             <Video 
