@@ -21,9 +21,9 @@ const ClientCards = ({ children, ...restProps }) => {
     )
 }
 
-ClientCards.Card = ({ children, ...restProps }) => {
+ClientCards.Card = ({ children, redirect, ...restProps }) => {
     return(
-        <Card { ...restProps }>
+        <Card { ...restProps } onClick={ redirect }>
             { children }
         </Card>
     )

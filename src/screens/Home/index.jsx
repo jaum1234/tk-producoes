@@ -33,10 +33,9 @@ const Home = () => {
             ],
             part: [
                 "statistics",
-                "snippet"
+                "snippet",
             ]
         });
-
 
         setClients(response.data.items);
     }, []);
