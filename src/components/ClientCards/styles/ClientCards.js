@@ -2,15 +2,16 @@ import styled from "styled-components";
 import Image from '../../Image';
 import { forMobile } from "../../../styles/media_queries";
 import { convertToRem } from "../../../styles/utils";
+import Link from "../../Link";
 
 const List = styled.div`
     display: Grid;
     justify-content: center;
 
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 33% 33% 33%;
     row-gap: ${convertToRem(100)};
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1400px) {
         grid-template-columns: 1fr;
     }
 
@@ -19,8 +20,9 @@ const List = styled.div`
     }
 ` 
 
-const Card = styled.div`
+const Card = styled(Link)`
    
+    cursor: pointer;
     width: ${convertToRem(411)};
     height: ${convertToRem(274)};
     position: relative;
@@ -81,8 +83,6 @@ const Icon = styled.div`
     @media screen and (max-width: 480px) {
         font-size: ${convertToRem(17)};
     }
-
-    
 `
 
 const Text = styled.p`  

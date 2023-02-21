@@ -69,6 +69,8 @@ const Item = styled(Link)`
     font-size: 16px;
     margin-right: 24px;
 
+    color: ${props => props.active};
+
     @media screen and (max-width: 575px) {
         margin-bottom: 16px;
         margin-right: 0;

@@ -50,7 +50,7 @@ const homeFixtures = {
         subtitles: [
             {
                 id: 1, 
-                text: "Gostou do meu trabalho? Entre em contado pelas minha redes sociais!",
+                text: "Gostou do meu trabalho? Entre em contato pelas minha redes sociais!",
                 locale: "pt-BR"
             },
             {

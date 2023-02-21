@@ -15,6 +15,12 @@ const NavbarContainer = () => {
         setCollapse(prev => !prev);
     }
 
+    const isActive = (url) => {
+    	const pathname = router.pathname;
+
+	return url === pathname;
+    }
+
     return(
         <>
             <Navbar>
@@ -32,7 +38,11 @@ const NavbarContainer = () => {
                                     .filter(item => item.locale === locale)
                                     .map(({ links }) => 
                                         links.map(({ id , url, label }) => 
-                                            <Navbar.Item key={ id } href={ url }>
+                                            <Navbar.Item 
+						key={ id } 
+						href={ url }
+						active={ isActive(url) }
+					    >
                                                 { label }
                                             </Navbar.Item>
                                         )

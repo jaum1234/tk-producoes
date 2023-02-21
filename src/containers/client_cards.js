@@ -4,23 +4,20 @@ import ClientCards from "../components/ClientCards";
 
 const ClientCardsContainer = ({ clients }) => {
 
-    const reduceNumber = (number) => {
-        if (number >= 1000 && number < 1000000) {
- 	    return String(Math.trunc(number/1000)) + "K";
-	} 
-	
-	if (number >= 1000000) {
-	    return String(Math.trunc(number/1000000)) + "M";
-	}
-
-	return number;
-    };
-
     return(
         <ClientCards>
             {
                 clients.map(client => 
-                    <ClientCards.Card key={ client.id }>
+                    <ClientCards.Card 
+                        key={ client.id }
+                        href={ 
+                            client.snippet.title ? 
+                                `https://youtube.com/${client.snippet.title}` 
+                                :
+                                `https://youtube.com/channel/${client.id}`  
+                        }
+                        target="_black"
+                    >
                         <ClientCards.Banner 
                             src={ client.snippet.thumbnails.high.url } 
                             width={ 411 }
@@ -30,19 +27,11 @@ const ClientCardsContainer = ({ clients }) => {
                         <ClientCards.Infos>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <FaEye/> }/>
-                                <ClientCards.Text>
-                                    { 
-                                        client.statistics.viewCount  
-                                    }
-                                </ClientCards.Text>
+                                <ClientCards.Statistic statistics={ client.statistics.viewCount }/>
                             </ClientCards.Info>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <MdGroups/> }/>
-                                <ClientCards.Text>
-                                    { 
-                                        reduceNumber(client.statistics.subscriberCount) 
-                                    }
-                                </ClientCards.Text>
+                                <ClientCards.Statistic statistics={ client.statistics.subscriberCount }/>
                             </ClientCards.Info>
                         </ClientCards.Infos>
                     </ClientCards.Card>
