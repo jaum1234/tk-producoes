@@ -2,8 +2,8 @@ const forMobile = (styles: any) => {
 
     let formatedStyles = ``;
 
-    for (const key in styles) {
-        formatedStyles += `${key}: ${styles[key]};
+    for (const property in styles) {
+        formatedStyles += `${property}: ${styles[property]};
         `
     }
 

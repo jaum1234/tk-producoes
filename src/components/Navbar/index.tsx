@@ -15,9 +15,7 @@ import {
 } from "./styles/Navbar";
 import themes from "../../styles/themes.js";
 
-
-
-const Navbar = ({ children, ...restProps }) => {
+const Navbar = ({ children, ...restProps }: { children: JSX.Element }) => {
     return (
         <Header { ...restProps } id="header">   
             { children }
@@ -25,7 +23,7 @@ const Navbar = ({ children, ...restProps }) => {
     )
 }
 
-Navbar.Brand = function NavbarBrand({ src, ...restProps }) {
+Navbar.Brand = function NavbarBrand({ src, ...restProps }: { src: string }) {
     return(
         <Link href='/'>
             <Brand src={ src } { ...restProps } />
@@ -33,7 +31,7 @@ Navbar.Brand = function NavbarBrand({ src, ...restProps }) {
     )
 }
 
-Navbar.Box = function NavbarBox({ children, ...restProps }) {
+Navbar.Box = function NavbarBox({ children, ...restProps }: { children: JSX.Element }) {
     return(
         <Box { ...restProps } id="nav-box">
             { children }
@@ -41,7 +39,7 @@ Navbar.Box = function NavbarBox({ children, ...restProps }) {
     )
 }
 
-Navbar.Collapse = function NavbarBox({ collapse, children, ...restProps }) {
+Navbar.Collapse = function NavbarBox({ collapse, children, ...restProps }: { collapse: boolean, children: JSX.Element }) {
     
     return ( 
         <Collapse { ...restProps } style={ collapse ? {top: "55px"} : {top: "-200px"} }>
@@ -51,7 +49,7 @@ Navbar.Collapse = function NavbarBox({ collapse, children, ...restProps }) {
     
 }
 
-Navbar.Nav = function NavbarNav({ children, ...restProps }) {
+Navbar.Nav = function NavbarNav({ children, ...restProps }: { children: JSX.Element }) {
     return(
         <Nav { ...restProps }>
             { children }
@@ -59,7 +57,16 @@ Navbar.Nav = function NavbarNav({ children, ...restProps }) {
     )
 }
 
-Navbar.Item = function NavbarItem({ children, href, active = false, ...restProps }) {
+Navbar.Item = function NavbarItem({ 
+    children, 
+    href, 
+    active = false, 
+    ...restProps 
+}: { 
+    children: JSX.Element, 
+    href: string, 
+    active: boolean 
+}) {
     
     return(
 
@@ -75,7 +82,7 @@ Navbar.Divider = function NavbarDivider({ ...restProps }) {
     )
 }
 
-Navbar.Languages = function NavbarLanguages({ children, ...restProps }) {
+Navbar.Languages = function NavbarLanguages({ children, ...restProps }: { children: JSX.Element }) {
     return(
         <Languages { ...restProps }>
             { children }
@@ -83,19 +90,21 @@ Navbar.Languages = function NavbarLanguages({ children, ...restProps }) {
     )
 }
 
-Navbar.Language = function NavbarLanguage({ src, onClick, ...restProps }) {
+Navbar.Language = function NavbarLanguage({ src, ...restProps }: { src: string }) {
     return(
-        <Language src={ src } { ...restProps } onClick={ onClick }/>
+        <Language 
+            src={ src } 
+            { ...restProps }/>
     )
 }
 
-Navbar.Ham = function NavbarHam({ onOpen, ...restProps }) {
+Navbar.Ham = function NavbarHam({ onOpen, ...restProps }: { onOpen: () => void }) {
     return(
         <Ham { ...restProps } onClick={ onOpen }/>
     )
 }
 
-Navbar.Overlay = function NavbarOverlay({ collapse, ...restProps }) {
+Navbar.Overlay = function NavbarOverlay({ collapse, ...restProps }: { collapse: boolean }) {
     return(
         <Overlay 
             style={ 

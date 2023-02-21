@@ -39,10 +39,10 @@ const NavbarContainer = () => {
                                     .map(({ links }) => 
                                         links.map(({ id , url, label }) => 
                                             <Navbar.Item 
-						key={ id } 
-						href={ url }
-						active={ isActive(url) }
-					    >
+                                                key={ id } 
+                                                href={ url }
+                                                active={ isActive(url) }
+                                            >
                                                 { label }
                                             </Navbar.Item>
                                         )

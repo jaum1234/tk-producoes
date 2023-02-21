@@ -2,15 +2,18 @@ import axios from "axios"
 
 class Request
 {
-    constructor(baseURL)
+    private baseURL: string
+    private apiKey: string;
+
+    constructor(baseURL: string, apiKey: string)
     {
         this.baseURL = baseURL;
-        this.key = "AIzaSyC9IdR1NZq4K36zjKaPuAwEJnCNQp7RcQo"
+        this.apiKey = apiKey;
     }
 
-    get = async (endpoint, queryStrings, config = {}) => {
+    get = async (endpoint: string, queryStrings: any, config = {}) => {
 
-        let fullURL = `${this.baseURL}${endpoint}?key=${this.key}`;
+        let fullURL = `${this.baseURL}${endpoint}?key=${this.apiKey}`;
 
         for (const queryString in queryStrings) {
             if (Array.isArray(queryStrings[queryString])) {
