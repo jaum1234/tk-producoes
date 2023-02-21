@@ -7,8 +7,6 @@ const forMobile = (styles) => {
         `
     }
 
-    console.log(formatedStyles)
-
     return `@media screen and (max-width: 480px) {
         ${formatedStyles}
     }`
