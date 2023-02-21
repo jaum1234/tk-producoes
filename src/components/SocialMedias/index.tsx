@@ -1,6 +1,6 @@
 import { List, Link, Icon } from "./styles/SocialMedias";
 
-const SocialMedias = ({ children }) => {
+const SocialMedias = ({ children }: { children: JSX.Element }) => {
     return(
         <List>
             { children }
@@ -8,7 +8,7 @@ const SocialMedias = ({ children }) => {
     )
 }
 
-SocialMedias.Link = ({ children, href, ...restProps}) => {
+SocialMedias.Link = ({ children, href, ...restProps}: { children: JSX.Element, href: string }) => {
     return(
         <Link target={'_blank'} href={ href } {...restProps}> 
             { children }
@@ -16,7 +16,7 @@ SocialMedias.Link = ({ children, href, ...restProps}) => {
     )
 }
 
-SocialMedias.Icon = ({ src, ...restProps }) => {
+SocialMedias.Icon = ({ src, ...restProps }: { src: string }) => {
     return(
         <Icon src={ src } { ...restProps }/>
     )
