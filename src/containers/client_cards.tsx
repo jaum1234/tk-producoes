@@ -1,27 +1,27 @@
 import { FaEye } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 import ClientCards from "../components/ClientCards";
+import { Channel } from '../types/channel';
 
 
-
-const ClientCardsContainer = ({ clients }: any) => {
+const ClientCardsContainer = ({ clients }: { clients: Array<Channel> }) => {
 
     return(
         <ClientCards>
             {
-                clients.map((client: any) => 
+                clients.map((client: Channel) => 
                     <ClientCards.Card 
                         key={ client.id }
                         href={ 
-                            client.snippet.title ? 
-                                `https://youtube.com/${client.snippet.title}` 
+                            client.name ? 
+                                `https://youtube.com/${client.name}` 
                                 :
                                 `https://youtube.com/channel/${client.id}`  
                         }
                         target="_black"
                     >
                         <ClientCards.Banner 
-                            src={ client.snippet.thumbnails.high.url } 
+                            src={ client.thumbnails.url } 
                             width={ 411 }
                             height={ 274 }
                             objectFit="cover"
@@ -29,11 +29,11 @@ const ClientCardsContainer = ({ clients }: any) => {
                         <ClientCards.Infos>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <FaEye/> }/>
-                                <ClientCards.Statistic statistics={ client.statistics.viewCount }/>
+                                <ClientCards.Statistic statistics={ client.statistics.views }/>
                             </ClientCards.Info>
                             <ClientCards.Info>
                                 <ClientCards.Icon icon={ <MdGroups/> }/>
-                                <ClientCards.Statistic statistics={ client.statistics.subscriberCount }/>
+                                <ClientCards.Statistic statistics={ client.statistics.subs }/>
                             </ClientCards.Info>
                         </ClientCards.Infos>
                     </ClientCards.Card>

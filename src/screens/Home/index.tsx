@@ -14,13 +14,14 @@ import youtube from "../../apis/youtube";
 import Router, { useRouter } from 'next/router';
 import homeFixtures from '../../fixtures/home';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { Channel } from '../../types/channel';
 
 
 const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay=1&muted=1&loop=1'
 
 const Home = () => {
 
-    const [ clients, setClients ] = useState([]);
+    const [ clients, setClients ] = useState<Array<Channel>>([]);
     const { locale } = useRouter();
 
     const fetchClients = async () => {
@@ -36,7 +37,27 @@ const Home = () => {
             ]
         });
 
-        setClients(response.data.items);
+        let channels: Array<Channel> = [];
+
+        for (const channel of response.data.items) {
+
+            const filteredChannel: Channel = {
+                id: channel.id,
+                name: channel.snippet.title,
+                statistics: {
+                    views: channel.statistics.viewCount,
+                    subs: channel.statistics.subscriberCount
+                },
+                thumbnails: {
+                    url: channel.snippet.thumbnails.high.url
+                }
+
+            }
+
+            channels.push(filteredChannel);
+        }
+
+        setClients(channels);
     }
 
     useEffect(() => {
