@@ -2,12 +2,14 @@ import { FaEye } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 import ClientCards from "../components/ClientCards";
 
-const ClientCardsContainer = ({ clients }) => {
+
+
+const ClientCardsContainer = ({ clients }: any) => {
 
     return(
         <ClientCards>
             {
-                clients.map(client => 
+                clients.map((client: any) => 
                     <ClientCards.Card 
                         key={ client.id }
                         href={ 

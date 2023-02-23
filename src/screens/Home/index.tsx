@@ -20,11 +20,10 @@ const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay
 
 const Home = () => {
 
-    const [clients, setClients] = useState([]);
+    const [ clients, setClients ] = useState([]);
     const { locale } = useRouter();
 
-    useEffect(async () => {
-
+    const fetchClients = async () => {
         const response = await youtube.get("/channels", {
             id: [
                 "UC17wnw7BfA_z3AzcO_71Mrw",
@@ -38,6 +37,12 @@ const Home = () => {
         });
 
         setClients(response.data.items);
+    }
+
+    useEffect(() => {
+
+        fetchClients();
+        
     }, []);
 
     return (
@@ -45,7 +50,7 @@ const Home = () => {
             
             <HomeSection>
                 <Fade
-                    triggerOnce="true"
+                    triggerOnce={ true }
                 >
                     { 
                         homeFixtures.entrySection.title.texts
@@ -79,7 +84,7 @@ const Home = () => {
             </HomeSection>
             <HomeSection>
                 <Fade
-                    triggerOnce="true"
+                    triggerOnce={ true }
                     direction="up"
                     fraction={0.5}
                 >
@@ -97,7 +102,7 @@ const Home = () => {
             </HomeSection>
             <HomeSection>
                 <Fade
-                    triggerOnce="true"
+                    triggerOnce={ true }
                     direction="up"
                 >
                     {

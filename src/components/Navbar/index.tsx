@@ -13,9 +13,9 @@ import {
     Box,
     Overlay
 } from "./styles/Navbar";
-import themes from "../../styles/themes.js";
+import themes from "../../styles/themes";
 
-const Navbar = ({ children, ...restProps }: { children: JSX.Element }) => {
+const Navbar = ({ children, ...restProps }: { children: React.ReactElement }) => {
     return (
         <Header { ...restProps } id="header">   
             { children }
@@ -23,7 +23,7 @@ const Navbar = ({ children, ...restProps }: { children: JSX.Element }) => {
     )
 }
 
-Navbar.Brand = function NavbarBrand({ src, ...restProps }: { src: string }) {
+Navbar.Brand = function NavbarBrand({ src, ...restProps }: { src: string | any }) {
     return(
         <Link href='/'>
             <Brand src={ src } { ...restProps } />
@@ -31,7 +31,7 @@ Navbar.Brand = function NavbarBrand({ src, ...restProps }: { src: string }) {
     )
 }
 
-Navbar.Box = function NavbarBox({ children, ...restProps }: { children: JSX.Element }) {
+Navbar.Box = function NavbarBox({ children, ...restProps }: { children: React.ReactNode }) {
     return(
         <Box { ...restProps } id="nav-box">
             { children }
@@ -39,7 +39,14 @@ Navbar.Box = function NavbarBox({ children, ...restProps }: { children: JSX.Elem
     )
 }
 
-Navbar.Collapse = function NavbarBox({ collapse, children, ...restProps }: { collapse: boolean, children: JSX.Element }) {
+Navbar.Collapse = function NavbarBox({ 
+    collapse, 
+    children, 
+    ...restProps 
+}: { 
+    collapse: boolean, 
+    children: JSX.Element | JSX.Element[]
+}) {
     
     return ( 
         <Collapse { ...restProps } style={ collapse ? {top: "55px"} : {top: "-200px"} }>
@@ -49,7 +56,7 @@ Navbar.Collapse = function NavbarBox({ collapse, children, ...restProps }: { col
     
 }
 
-Navbar.Nav = function NavbarNav({ children, ...restProps }: { children: JSX.Element }) {
+Navbar.Nav = function NavbarNav({ children, ...restProps }: { children: React.ReactNode }) {
     return(
         <Nav { ...restProps }>
             { children }
@@ -63,7 +70,7 @@ Navbar.Item = function NavbarItem({
     active = false, 
     ...restProps 
 }: { 
-    children: JSX.Element, 
+    children: React.ReactNode | undefined | string, 
     href: string, 
     active: boolean 
 }) {
@@ -82,7 +89,7 @@ Navbar.Divider = function NavbarDivider({ ...restProps }) {
     )
 }
 
-Navbar.Languages = function NavbarLanguages({ children, ...restProps }: { children: JSX.Element }) {
+Navbar.Languages = function NavbarLanguages({ children, ...restProps }: { children: React.ReactNode }) {
     return(
         <Languages { ...restProps }>
             { children }
@@ -90,10 +97,24 @@ Navbar.Languages = function NavbarLanguages({ children, ...restProps }: { childr
     )
 }
 
-Navbar.Language = function NavbarLanguage({ src, ...restProps }: { src: string }) {
+Navbar.Language = function NavbarLanguage({ 
+    src, 
+    width, 
+    height, 
+    onClick,
+    ...restProps 
+}: { 
+    src: string | any,
+    width: any,
+    height: any
+    onClick: any
+}) {
     return(
         <Language 
             src={ src } 
+            width={ width }
+            height={ height }
+            onClick={ onClick }
             { ...restProps }/>
     )
 }

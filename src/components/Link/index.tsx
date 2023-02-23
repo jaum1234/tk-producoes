@@ -1,8 +1,8 @@
 import NextLink from 'next/link';
 
-type LinkProps = {
-    children: JSX.Element,
-    href?: string | undefined | any,
+export type LinkProps = {
+    children: React.ReactNode,
+    href?: any,
     target?: any,
     locale?: string | false | undefined
 }

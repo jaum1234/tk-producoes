@@ -1,6 +1,7 @@
+import { StaticImageData } from "next/image";
 import { List, Link, Icon } from "./styles/SocialMedias";
 
-const SocialMedias = ({ children }: { children: JSX.Element }) => {
+const SocialMedias = ({ children }: { children: React.ReactNode }) => {
     return(
         <List>
             { children }
@@ -8,7 +9,7 @@ const SocialMedias = ({ children }: { children: JSX.Element }) => {
     )
 }
 
-SocialMedias.Link = ({ children, href, ...restProps}: { children: JSX.Element, href: string }) => {
+SocialMedias.Link = ({ children, href, ...restProps}: { children: React.ReactNode, href: string }) => {
     return(
         <Link target={'_blank'} href={ href } {...restProps}> 
             { children }
@@ -16,7 +17,7 @@ SocialMedias.Link = ({ children, href, ...restProps}: { children: JSX.Element, h
     )
 }
 
-SocialMedias.Icon = ({ src, ...restProps }: { src: string }) => {
+SocialMedias.Icon = ({ src, ...restProps }: { src: StaticImageData }) => {
     return(
         <Icon src={ src } { ...restProps }/>
     )

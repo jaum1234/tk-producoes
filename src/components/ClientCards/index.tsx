@@ -7,13 +7,13 @@ import {
     Text,
     Icon
 } from './styles/ClientCards';
-import Image from "../Image";
+import { ImageProps } from "../Image";
 import { useState, useEffect } from 'react';
-import { useRef } from 'react';
 import numberReducer from '../../utils/number_reducer';
+import { LinkProps } from '../Link';
 
 
-const ClientCards = ({ children, ...restProps }: { children: JSX.Element }) => {
+const ClientCards = ({ children, ...restProps }: { children: React.ReactNode }) => {
     return(
         <List { ...restProps }>
             { children }
@@ -21,19 +21,19 @@ const ClientCards = ({ children, ...restProps }: { children: JSX.Element }) => {
     )
 }
 
-ClientCards.Card = ({ children, ...restProps }: { children: JSX.Element }) => {
+ClientCards.Card = ({ children, href, ...restProps }: LinkProps) => {
     return(
-        <Card { ...restProps }>
+        <Card href={ href } { ...restProps }>
             { children }
         </Card>
     )
 }
 
-ClientCards.Banner = function ClientCardBanner({ src, ...restProps }: { src: string }) {
+ClientCards.Banner = function ClientCardBanner({ src, ...restProps }: ImageProps) {
     return <Banner src={ src } { ...restProps }/>
 }
 
-ClientCards.Infos = function ClientCardInfos({ children, ...restProps }: { children: JSX.Element }) {
+ClientCards.Infos = function ClientCardInfos({ children, ...restProps }: { children: React.ReactNode }) {
     return(
         <Infos { ...restProps }>
             { children }
@@ -41,7 +41,7 @@ ClientCards.Infos = function ClientCardInfos({ children, ...restProps }: { child
     )
 }
 
-ClientCards.Info = function ClientCardInfo({ children, ...restProps }: { children: JSX.Element }) {
+ClientCards.Info = function ClientCardInfo({ children, ...restProps }: { children: React.ReactNode }) {
     return(
         <Info { ...restProps }>
             { children }
@@ -49,7 +49,7 @@ ClientCards.Info = function ClientCardInfo({ children, ...restProps }: { childre
     )
 }
 
-ClientCards.Icon = function ClientCardIcon({ icon, ...restProps}: { icon: JSX.Element }) {
+ClientCards.Icon = function ClientCardIcon({ icon, ...restProps}: { icon: React.ReactNode }) {
     return (
         <Icon { ...restProps }>
             { icon }

@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+type ContainerProps = {
+    display?: string,
+    alignItems?: string
+}
+
+export const Container = styled.div<ContainerProps>`
     width: 1320px;
     margin: 0 auto;
 
@@ -28,7 +33,23 @@ export const Container = styled.div`
     }
 `
 
-export const Box = styled.div`
+type BoxProps = {
+    bg?: string,
+    bgImg?: string,
+    bgAttach?: string,
+    mt?: string | number,
+    mb?: string | number,
+    ml?: string | number,
+    mr?: string | number,
+    pt?: string | number,
+    pb?: string | number,
+    pl?: string | number,
+    pr?: string | number,
+    position?: string | number,
+    w?: string
+}
+
+export const Box = styled.div<BoxProps>`
     background: ${props => props.bg || "none"};
     background-image: ${props => `url(${props.bgImg})` || "none"};
     background-attachment: ${props => props.bgAttach || ""};
@@ -50,7 +71,15 @@ export const Box = styled.div`
     width: ${props => props.w || "auto"};
 `
 
-export const Flex = styled.div`
+type FlexProps = {
+    alignItems?: string,
+    flexDir?: string,
+    flexWrap?: string,
+    justifyContent?: string
+}
+
+
+export const Flex = styled.div<FlexProps>`
     display: flex;
     align-items: ${props => props.alignItems || "flex-start"};
     flex-direction: ${props => props.flexDir || "row"};
@@ -58,7 +87,13 @@ export const Flex = styled.div`
     justify-content: ${props => props.justifyContent || "flex-start"};
 `
 
-export const Grid = styled.div`
+type GridProps = {
+    alignItems?: string,
+    gap?: string | number
+    templateColumns?: string
+}
+
+export const Grid = styled.div<GridProps>`
     display: grid;
     align-items: ${props => props.alignItems};
     gap: ${props => props.gap};

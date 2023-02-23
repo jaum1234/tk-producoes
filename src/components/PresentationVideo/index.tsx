@@ -2,7 +2,7 @@
 import { Container, Video } from './styles/PresentationVideo';
 
 type PresentationVideoProps = {
-    id: any,
+    id?: any,
     src: string
 }
 
