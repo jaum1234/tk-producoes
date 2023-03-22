@@ -7,13 +7,13 @@ import {
     Text,
     Icon
 } from './styles/ClientCards';
-import Image from "../Image";
+import { ImageProps } from "../Image";
 import { useState, useEffect } from 'react';
-import { useRef } from 'react';
 import numberReducer from '../../utils/number_reducer';
+import { LinkProps } from '../Link';
 
 
-const ClientCards = ({ children, ...restProps }) => {
+const ClientCards = ({ children, ...restProps }: { children: React.ReactNode }) => {
     return(
         <List { ...restProps }>
             { children }
@@ -21,19 +21,19 @@ const ClientCards = ({ children, ...restProps }) => {
     )
 }
 
-ClientCards.Card = ({ children, redirect, ...restProps }) => {
+ClientCards.Card = ({ children, href, ...restProps }: LinkProps) => {
     return(
-        <Card { ...restProps } onClick={ redirect }>
+        <Card href={ href } { ...restProps }>
             { children }
         </Card>
     )
 }
 
-ClientCards.Banner = function ClientCardBanner({ src, ...restProps }) {
+ClientCards.Banner = function ClientCardBanner({ src, ...restProps }: ImageProps) {
     return <Banner src={ src } { ...restProps }/>
 }
 
-ClientCards.Infos = function ClientCardInfos({ children, ...restProps }) {
+ClientCards.Infos = function ClientCardInfos({ children, ...restProps }: { children: React.ReactNode }) {
     return(
         <Infos { ...restProps }>
             { children }
@@ -41,7 +41,7 @@ ClientCards.Infos = function ClientCardInfos({ children, ...restProps }) {
     )
 }
 
-ClientCards.Info = function ClientCardInfo({ children, ...restProps }) {
+ClientCards.Info = function ClientCardInfo({ children, ...restProps }: { children: React.ReactNode }) {
     return(
         <Info { ...restProps }>
             { children }
@@ -49,7 +49,7 @@ ClientCards.Info = function ClientCardInfo({ children, ...restProps }) {
     )
 }
 
-ClientCards.Icon = function ClientCardIcon({ icon, ...restProps}) {
+ClientCards.Icon = function ClientCardIcon({ icon, ...restProps}: { icon: React.ReactNode }) {
     return (
         <Icon { ...restProps }>
             { icon }
@@ -57,11 +57,11 @@ ClientCards.Icon = function ClientCardIcon({ icon, ...restProps}) {
     );
 }
 
-ClientCards.Statistic = function ClientCardStatistic({ statistics, ...restProps }) {
+ClientCards.Statistic = function ClientCardStatistic({ statistics, ...restProps }: { statistics: number }) {
 
-    const [statistic, setStatistic] = useState(0);
+    const [statistic, setStatistic] = useState<number>(0);
 
-    let increment;
+    let increment: NodeJS.Timer;
 
     const incrementStatistics = () => {
 

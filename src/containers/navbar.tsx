@@ -1,8 +1,7 @@
 import Navbar from '../components/Navbar';
 import navbarFixtures from '../fixtures/navbar';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from "next/router";
-import Link from '../components/Link';
 import { Slide } from 'react-awesome-reveal';
 
 const NavbarContainer = () => {
@@ -15,10 +14,10 @@ const NavbarContainer = () => {
         setCollapse(prev => !prev);
     }
 
-    const isActive = (url) => {
+    const isActive = (url: string) => {
     	const pathname = router.pathname;
 
-	return url === pathname;
+	    return url === pathname;
     }
 
     return(
@@ -26,7 +25,7 @@ const NavbarContainer = () => {
             <Navbar>
                 <Slide 
                     direction="down"
-                    triggerOnce="true"
+                    triggerOnce={ true }
                 >
                     <Navbar.Box>
                         <Navbar.Brand src={ navbarFixtures.logo }/>
@@ -35,14 +34,14 @@ const NavbarContainer = () => {
                             <Navbar.Nav>
                             {
                                 navbarFixtures.navigation.items
-                                    .filter(item => item.locale === locale)
+                                    .filter((item) => item.locale === locale)
                                     .map(({ links }) => 
                                         links.map(({ id , url, label }) => 
                                             <Navbar.Item 
-						key={ id } 
-						href={ url }
-						active={ isActive(url) }
-					    >
+                                                key={ id } 
+                                                href={ url }
+                                                active={ isActive(url) }
+                                            >
                                                 { label }
                                             </Navbar.Item>
                                         )

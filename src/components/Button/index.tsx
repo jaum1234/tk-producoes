@@ -1,6 +1,11 @@
 import { StyledButton } from './styles/Button';
 
-const Button = ({ children, onClick, ...restProps }) => {
+type ButtonProps = {
+    children: React.ReactNode,
+    onClick?: () => void
+}
+
+const Button = ({ children, onClick, ...restProps }: ButtonProps) => {
     return(
         <StyledButton 
             { ...restProps } 

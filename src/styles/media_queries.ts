@@ -1,13 +1,11 @@
-const forMobile = (styles) => {
+const forMobile = (styles: any) => {
 
     let formatedStyles = ``;
 
-    for (const key in styles) {
-        formatedStyles += `${key}: ${styles[key]};
+    for (const property in styles) {
+        formatedStyles += `${property}: ${styles[property]};
         `
     }
-
-    console.log(formatedStyles)
 
     return `@media screen and (max-width: 480px) {
         ${formatedStyles}

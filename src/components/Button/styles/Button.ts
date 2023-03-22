@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import themes from "../../../styles/themes";
 
+type ButtonProps = {
+    width?: number | string
+}
+
 export const StyledButton = styled.button`    
     background: ${themes.colors.call_to_action};
     background-size: 200% auto;
@@ -12,7 +16,7 @@ export const StyledButton = styled.button`
     align-items: center;
     justify-content: center;
     height: 45px;
-    width: ${props => props.width};
+    width: ${(props: ButtonProps) => props.width};
     text-align: center;
     font-weight: 400;
     transition: 0.5s;

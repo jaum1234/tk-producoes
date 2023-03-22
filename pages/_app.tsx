@@ -5,6 +5,7 @@ import Navbar from '../src/containers/navbar';
 import { Container } from '../src/layout';
 import { GlobalStyles } from '../src/styles/GlobalStyles';
 import { Slide } from 'react-awesome-reveal';
+import { AppProps } from 'next/app';
 
 // const SecundaryBackground = styled.div`
 
@@ -27,7 +28,7 @@ import { Slide } from 'react-awesome-reveal';
 //     }
 // `
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>

@@ -65,7 +65,11 @@ const Nav = styled.nav`
     }
 `
 
-const Item = styled(Link)`
+type ItemProps = {
+    active: string;
+}
+
+const Item = styled(Link)<ItemProps>`
     font-size: 16px;
     margin-right: 24px;
 

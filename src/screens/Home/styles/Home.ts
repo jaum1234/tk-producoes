@@ -61,7 +61,15 @@ const HomeButton = styled(Button)`
 
 const HomeSection = styled.section`   
 `
-const HomeText = styled.p`
+
+type HomeTextProps = {
+    margin: string | number,
+    textTransform: string,
+    fontSize: string | number,
+    fontWeight: string | number
+}
+
+const HomeText = styled.p<HomeTextProps>`
     margin: ${props => props.margin};
     max-width: 500px;
     text-transform: ${props => props.textTransform};

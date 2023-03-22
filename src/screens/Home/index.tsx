@@ -14,17 +14,17 @@ import youtube from "../../apis/youtube";
 import Router, { useRouter } from 'next/router';
 import homeFixtures from '../../fixtures/home';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { Channel } from '../../types/channel';
 
 
 const videoUrl = 'https://player.vimeo.com/video/667967430?h=8749bf9a83&autoplay=1&muted=1&loop=1'
 
 const Home = () => {
 
-    const [clients, setClients] = useState([]);
+    const [ clients, setClients ] = useState<Array<Channel>>([]);
     const { locale } = useRouter();
 
-    useEffect(async () => {
-
+    const fetchClients = async () => {
         const response = await youtube.get("/channels", {
             id: [
                 "UC17wnw7BfA_z3AzcO_71Mrw",
@@ -37,7 +37,36 @@ const Home = () => {
             ]
         });
 
-        setClients(response.data.items);
+        let channels: Array<Channel> = [];
+
+        for (const channel of response.data.items) {
+
+            console.log(channel);
+
+            const filteredChannel: Channel = {
+                id: channel.id,
+                name: channel.snippet.title,
+                customUrl: channel.snippet.customUrl,
+                statistics: {
+                    views: channel.statistics.viewCount,
+                    subs: channel.statistics.subscriberCount
+                },
+                thumbnails: {
+                    url: channel.snippet.thumbnails.high.url
+                }
+
+            }
+
+            channels.push(filteredChannel);
+        }
+
+        setClients(channels);
+    }
+
+    useEffect(() => {
+
+        fetchClients();
+        
     }, []);
 
     return (
@@ -45,7 +74,7 @@ const Home = () => {
             
             <HomeSection>
                 <Fade
-                    triggerOnce="true"
+                    triggerOnce={ true }
                 >
                     { 
                         homeFixtures.entrySection.title.texts
@@ -79,7 +108,7 @@ const Home = () => {
             </HomeSection>
             <HomeSection>
                 <Fade
-                    triggerOnce="true"
+                    triggerOnce={ true }
                     direction="up"
                     fraction={0.5}
                 >
@@ -97,7 +126,7 @@ const Home = () => {
             </HomeSection>
             <HomeSection>
                 <Fade
-                    triggerOnce="true"
+                    triggerOnce={ true }
                     direction="up"
                 >
                     {
