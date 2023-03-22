@@ -13,12 +13,12 @@ const ClientCardsContainer = ({ clients }: { clients: Array<Channel> }) => {
                     <ClientCards.Card 
                         key={ client.id }
                         href={ 
-                            client.name ? 
-                                `https://youtube.com/${client.name}` 
+                            client.customUrl ? 
+                                `https://youtube.com/${client.customUrl}` 
                                 :
                                 `https://youtube.com/channel/${client.id}`  
                         }
-                        target="_black"
+                        target="_blank"
                     >
                         <ClientCards.Banner 
                             src={ client.thumbnails.url } 

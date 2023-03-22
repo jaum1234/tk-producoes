@@ -17,7 +17,7 @@ const NavbarContainer = () => {
     const isActive = (url: string) => {
     	const pathname = router.pathname;
 
-	return url === pathname;
+	    return url === pathname;
     }
 
     return(

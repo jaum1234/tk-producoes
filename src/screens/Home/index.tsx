@@ -41,9 +41,12 @@ const Home = () => {
 
         for (const channel of response.data.items) {
 
+            console.log(channel);
+
             const filteredChannel: Channel = {
                 id: channel.id,
                 name: channel.snippet.title,
+                customUrl: channel.snippet.customUrl,
                 statistics: {
                     views: channel.statistics.viewCount,
                     subs: channel.statistics.subscriberCount
